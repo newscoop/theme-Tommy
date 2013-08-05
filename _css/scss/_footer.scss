@@ -1,0 +1,61 @@
+.footer-alpha {
+	background: $d-green;
+	margin: 4em -20px 0 -20px;
+	padding: 1em;
+	clear: both;
+	h4 {
+		background: #fff;
+		padding: 0.5em;
+		clear: both;
+		@include font-size(16);
+		font-weight: normal;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0 0 2em 0.5em;
+	}
+	a,
+	p {
+		color: #fff;
+		padding: 0.5em 0;
+		display: block;
+		text-decoration: none;
+		@include font-size(15);
+		width: 50%;
+		float: left;
+	}
+	p {
+		width: 100%;
+		float: none;
+	}
+	.link-to-top {
+		display: block;
+		clear: both;
+		background: $l-green;
+		color: $black;
+		width: 100px;
+		float: none;
+		padding: 0.4em;
+		margin: 0 auto;
+		text-align: center;
+		border-top: 2px solid #fff;
+	}
+}
+
+
+
+@media all and (min-width: 500px) {
+	.footer-alpha div {
+		width: 48%;
+		margin: 0 1%;
+		float: left
+	}
+}
+
+@media all and (min-width: 800px) {
+	.footer-alpha div {
+		width: 31%;
+	}
+}

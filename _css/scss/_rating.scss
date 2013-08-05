@@ -1,0 +1,44 @@
+.stars {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 4em;
+	position: relative;
+	li {
+		display: block;
+		float: left;
+		width: 3em;
+		height: 3em;
+		margin: 0 0.5em 0 0;
+		text-indent: -2012em;
+		cursor: pointer;
+		position: relative;
+		&:before {
+			content: "\2605";
+			display: block;
+			position: absolute;
+			@include font-size(34);
+			color: $grey;
+			left: 0;
+			top: -10px;
+			text-indent: 0;
+		}
+	}
+}
+
+.oldie .stars li {background: #f0f0f0;}
+
+.oldie .stars .ratings_vote{background: #ddd;}
+
+.oldie .stars .ratings_over {background: #ccc;}
+
+.stars .ratings_vote:before {color: $l-green;}
+
+.stars .ratings_over:before {color: $d-green;}
+
+.total_votes {
+	display: block;
+	clear: both;
+	padding: 0.3em 0.6em;
+	background: #f0f0f0;
+}

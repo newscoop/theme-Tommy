@@ -1,0 +1,14 @@
+.form,
+.form-register form {
+	label {
+		display: block;
+		float: left;
+		margin: 0 1em 2em 0;
+		@include font-size(16);
+		width: 30%;
+		clear: both;
+	}
+	input {
+		margin: 0 0 1.4em 0;
+	}
+}

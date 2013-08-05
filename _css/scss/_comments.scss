@@ -1,0 +1,60 @@
+.box-comments {
+	p {@include font-size(13);}
+	h3 a {@include font-size(16);}
+	a {color: $d-green;}
+}
+
+.article-comments ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		padding: 1em 1em 0.1em 1em;
+		margin: 0 0 1em 0;
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+.article-comments li:nth-child(2n+1) {
+	background: #eee;
+}
+
+.article-comments-write {
+	display: block;
+	margin: 0 0 2em 0;
+	padding: 0.5em;
+	border: 1px solid $d-green;
+}
+
+.article-comments {
+	margin: 4em 0;
+	h4 {
+		@include font-size(14);
+		margin: 0.3em 0;
+	}
+	time {@include font-size(12);}
+	.avatar {
+		width: 60px;
+		margin: 0 1em 0 0;
+		height: 60px;
+		display: block;
+		float: left;
+		background: $grey;
+	}
+	p {margin: 0 0 0 70px;}
+}
+
+.article-comment-form textarea {
+	width: 95%;
+	border: 1px solid $grey;
+	@include font-size(16);
+	color: $black;
+	padding: 2%;
+	margin: 1em 0 1em 0;
+}
+
+.article-comment-form input {
+	display: block;
+	margin: 1em 0 0 0;
+	width: 100%;
+}

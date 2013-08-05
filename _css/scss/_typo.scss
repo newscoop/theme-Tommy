@@ -1,0 +1,41 @@
+h1 {
+	font-family: $alpha-font;
+	@include font-size(22);
+	font-weight: normal;
+	border-bottom: 2px solid $d-green;
+	clear: both;
+	padding: 0.2em 0;
+	margin: 1em 0 0.3em 0;
+}
+
+h2 a {
+  font-family: $alpha-font;
+  @include font-size(18);
+  font-weight: normal;
+  clear: both;
+  padding: 0.2em 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+a {
+	@include font-size(14);
+  color: $d-green;
+}
+
+p {
+  @include font-size(14); 
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+
+figure + p {padding: $space 0 0 0;}
+
+figure + p:first-letter {
+  @include font-size(30);
+  padding: 0 0 0 $space;
+  line-height: 0;
+  color: $d-green;
+  font-family: $alpha-font;
+}
