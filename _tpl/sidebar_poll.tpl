@@ -5,23 +5,23 @@
     {{ if $gimme->debate_action->defined }}
         <h2>{{ $gimme->debate->question }}</h2>
         {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user || $gimme->debate_action->ok }}
-            <blockquote>{{ #thankYouPoll# }}</blockquote>
+            <p>{{ #thankYouPoll# }}</p>
         {{ elseif $gimme->debate_action->is_error }}
-            <blockquote>{{ #alreadyVoted# }}</blockquote>
+            <p>{{ #alreadyVoted# }}</p>
         {{ /if }}                        
 
         {{ assign var="votes" value=0 }}
         {{ list_debate_answers }}
           <div class="poll-option">
               <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}</label>
-              <div class="progress progress-danger progress-striped debate-bar">
-                    <div class="bar" style="width:{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%;"></div>
-              </div>
-              <span class="q-score label label-important"> <small>{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%</small></span>
+              <div class="poll-progress">
+                        <div class="bar" style="width:{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%;"></div>
+                  </div>
+              <span class="poll-score">{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%</span>
           </div>
             {{ assign var="votes" value=$votes+$gimme->debateanswer->votes }}
             {{ if $gimme->current_list->at_end }}
-            <div class="total-votes"><span>Number of votes: {{ $votes }}</span></div>
+            <p>Number of votes: {{ $votes }}</p>
             {{ /if }}
         {{ /list_debate_answers }}
 
@@ -52,15 +52,14 @@
        {{ else }}                       
             <h2>{{ $gimme->debate->question }}</h2> 
             {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}
-            <blockquote class="white-text poll-info">{{ #thankYouPoll# }}</blockquote>
-            <div class="clearfix"></div>
+            <p>{{ #thankYouPoll# }}</p>
             {{ /if }}  
             {{ list_debate_answers }}
               <div class="poll-option">
                   <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}
-                        <span class="q-score label label-important"> <small>{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%</small></span> 
+                        <span class="poll-score">{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%</span> 
                   </label>
-                  <div class="progress progress-danger progress-striped debate-bar">
+                  <div class="poll-progress">
                         <div class="bar" style="width:{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%;"></div>
                   </div>
               </div>
