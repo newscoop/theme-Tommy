@@ -1,4 +1,4 @@
-  <header class="clearfix">
+  <header class="header-main clearfix">
     <ul class="nav-top">
       <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{ #community# }}</a></li>
       {{ if !$gimme->user->logged_in}}

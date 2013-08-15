@@ -8,18 +8,18 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<div role="main" class="main site-front">
+<main role="main" class="main site-front">
     <div class="main-alpha">
     {{ include file="_tpl/front-stories.tpl" }}
     {{ include file="_tpl/section-stories.tpl" }}
     </div>
     <div class="main-beta clearfix">
         {{ include file="_tpl/multimedia.tpl" }}
-        {{ include file="_tpl/front-sidebar.tpl" }}
+        {{ include file="_tpl/sidebar_ad.tpl" }}
         {{ include file="_tpl/sidebar_poll.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
     </div>
-</div> <!-- end main role main -->
+</main> <!-- end main role main -->
 
 {{ include file="_tpl/footer.tpl" }}
 

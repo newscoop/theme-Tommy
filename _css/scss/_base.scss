@@ -21,7 +21,11 @@ html {
 
 body {
 	position: relative;
-	padding: $space 1em 0 1em;
+}
+
+.main,
+main {
+	padding: 0 1em;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -88,4 +92,9 @@ a:hover {text-decoration: underline;}
 .container-main {
 	margin: 0 auto;
 	max-width: 1024px;
+}
+
+.ad {
+	margin: 0 auto;
+	display: block;
 }

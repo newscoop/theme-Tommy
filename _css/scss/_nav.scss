@@ -110,6 +110,36 @@
   .nav-alpha {max-width: 70%;}
 }
 
+@media all and (min-width: 1200px) {
+  .nav-alpha {
+    max-width: 60%;
+    position: absolute;
+    top: -13px;
+    left: 160px;
+    a {
+      color: #fff;
+      @include font-size(15);
+      margin: 0 0.1em;
+      padding-top: 1em;
+      &:hover {
+        background: #fff;
+        color: $d-green;
+      }
+    }
+    .nav-current a {
+      background: #fff;
+      color: $d-green;
+    }
+  }
+
+  .nav-top {
+    margin: 10px 0 0 0;
+    a {
+      color: #fff;
+    }
+  }
+}
+
 
 #body:target .nav-link-close {display: block;}
 
@@ -118,3 +148,4 @@
 }
 
 #body:target .nav-link-open {display: none;}
+
