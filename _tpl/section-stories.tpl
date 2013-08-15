@@ -23,10 +23,11 @@
 				<time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
 				<a href="{{ uri option='article'}}#comments" class="news-section-comments">
 				{{ if $gimme->article->comment_count == 1 }}
-					{{ $gimme->article->comment_count }} {{ #comment# }}
+					{{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
 				{{ else }}
-					{{ $gimme->article->comment_count }} {{ #comments# }}
+					{{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
 				{{ /if }}
+				<span aria-hidden="true" class="icon-bubble"></span>
 
 				</a>
 		        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
