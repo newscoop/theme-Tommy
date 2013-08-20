@@ -128,6 +128,13 @@
     <script>
     $(document).ready(function () {
 
+      $('.link-to-top').click(function(e) {
+        e.preventDefault();
+        $("body, html").animate({
+            scrollTop : 0
+        }, 800);
+      });
+
       $('.poll-button').click(function(){
         $.post($('form[name=debate]').attr("action"),$('form[name=debate]').serialize(),function(data){$('.box-poll').html(data);});
         return false;

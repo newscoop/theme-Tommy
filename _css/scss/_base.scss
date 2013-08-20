@@ -24,6 +24,7 @@ body {
 }
 
 .main,
+.footer-main,
 main {
 	padding: 0 1em;
 	max-width: 1200px;
@@ -50,10 +51,10 @@ main {
 .ease,
 .ease:before,
 .ease:after {
-  -webkit-transition: all 0.8s ease-out;
-     -moz-transition: all 0.8s ease-out;
-       -o-transition: all 0.8s ease-out;
-          transition: all 0.8s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+     -moz-transition: all 0.4s ease-out;
+       -o-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out;
 }
 
 .skip-link,
@@ -86,15 +87,14 @@ img {
 	height: auto;
 }
 
-a:hover {text-decoration: underline;}
-
 /* wrapper */
 .container-main {
 	margin: 0 auto;
 	max-width: 1024px;
 }
 
-.ad {
+.news-sections .ad {
+	float: none;
 	margin: 0 auto;
 	display: block;
 }

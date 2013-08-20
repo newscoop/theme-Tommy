@@ -20,7 +20,6 @@
         {{ include file="_tpl/sidebar_poll.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
         {{ include file="_tpl/sidebar_ad.tpl" }}
-        {{ include file="_tpl/sidebar_comments.tpl" }}
     </div>
 </div> <!-- end main role main -->
 

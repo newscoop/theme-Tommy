@@ -40,16 +40,16 @@
             {{ if $multimediaType=="video" || $multimediaType=='audio'}} 
                 {{ list_article_attachments length="1" }}
                     {{ if $multimediaType == "audio" }}
-<h3>Audio</h3>
+                      <h3><span aria-hidden="true" class="icon-music"></span> Audio</h3>
                     {{ elseif $multimediaType == "video" }}
-<h3>Video</h3>
+                      <h3><span aria-hidden="true" class="icon-play"></span> Video</h3>
                     {{ /if }}
                 {{ /list_article_attachments }}
             {{ else }}
-<h3>Image</h3>
+                      <h3><span aria-hidden="true" class="icon-camera"></span> Image</h3>
                     {{ /if }}
               <a href="{{ uri options="article" }}">
-                {{ include file="_tpl/img/img_330x215.tpl"}}
+                {{ include file="_tpl/img/img_rectangle.tpl"}}
               </a>
             </div>
             {{ /list_articles }}

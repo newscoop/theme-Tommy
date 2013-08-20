@@ -1,4 +1,4 @@
-{{ list_articles length="5" ignore_issue="true" constraints="type not poll" }}
+{{ list_articles length="5" ignore_issue="true" constraints="type not poll" order="byPublishDate desc"}}
     {{ if $gimme->current_list->at_beginning }}            
 
     <article class="news-featured news-sections clearfix">
@@ -6,15 +6,15 @@
         <h2><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h2>
         <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
         <a href="{{ uri option='article'}}#comments" class="news-section-comments">
-        {{ if $gimme->article->comment_count == 1 }}
-            {{ $gimme->article->comment_count }} {{ #comment# }}
-        {{ else }}
-            {{ $gimme->article->comment_count }} {{ #comments# }}
-        {{ /if }}
-
-        </a>                                        
+        <span aria-hidden="true" class="icon-bubble"></span>
+            {{ if $gimme->article->comment_count == 1 }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
+            {{ else }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
+            {{ /if }}
+        </a>                                      
         <a href="{{ uri options="article" }}">
-            {{ include file="_tpl/img/img_330x215.tpl" }}
+            {{ include file="_tpl/img/img_rectangle.tpl" }}
         </a>
         {{ if !$gimme->article->content_accessible }}
         <span class="info info-premium">{{ #premium# }}</span>
@@ -27,16 +27,16 @@
     <article class="news-sections clearfix">
         <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
         <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
-                <a href="{{ uri option='article'}}#comments" class="news-section-comments">
-                {{ if $gimme->article->comment_count == 1 }}
-                    {{ $gimme->article->comment_count }} {{ #comment# }}
-                {{ else }}
-                    {{ $gimme->article->comment_count }} {{ #comments# }}
-                {{ /if }}
-
-                </a>                                     
+        <a href="{{ uri option='article'}}#comments" class="news-section-comments">
+        <span aria-hidden="true" class="icon-bubble"></span>
+            {{ if $gimme->article->comment_count == 1 }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
+            {{ else }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
+            {{ /if }}
+        </a>                                    
         <a href="{{ uri options="article" }}">
-            {{ include file="_tpl/img/img_330x215.tpl" }}
+            {{ include file="_tpl/img/img_rectangle.tpl" }}
         </a>
         {{ if !$gimme->article->content_accessible }}
         <span class="info info-premium">{{ #premium# }}</span>

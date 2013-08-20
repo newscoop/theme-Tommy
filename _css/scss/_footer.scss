@@ -1,3 +1,5 @@
+.footer-main {width: 100%;}
+
 .footer-alpha {
 	background: $d-green;
 	margin: 4em -20px 0 -20px;
@@ -18,12 +20,16 @@
 	a,
 	p {
 		color: #fff;
-		padding: 0.5em 0;
+		padding: 0.3em;
 		display: block;
 		text-decoration: none;
 		@include font-size(15);
-		width: 50%;
+		width: 45%;
 		float: left;
+	}
+	a:hover {
+		background: #fff;
+		color: $d-green;
 	}
 	p {
 		width: 100%;
@@ -55,7 +61,7 @@
 
 
 @media all and (min-width: 500px) {
-	.footer-alpha div {
+	.footer-main div {
 		width: 48%;
 		margin: 0 1%;
 		float: left
@@ -63,7 +69,7 @@
 }
 
 @media all and (min-width: 800px) {
-	.footer-alpha div {
+	.footer-main div {
 		width: 31%;
 	}
 }

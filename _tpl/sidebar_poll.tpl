@@ -3,7 +3,7 @@
 {{ list_articles length="1" ignore_issue="true" ignore_section="true" constraints="type is poll" }}
 {{ list_debates length="1" item="article" }}
     {{ if $gimme->debate_action->defined }}
-        <h2>{{ $gimme->debate->question }}</h2>
+        <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2>
         {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user || $gimme->debate_action->ok }}
             <p>{{ #thankYouPoll# }}</p>
         {{ elseif $gimme->debate_action->is_error }}
@@ -28,7 +28,7 @@
     {{ else }}
        {{ if $gimme->debate->is_votable }}
 
-            <h2>{{ $gimme->debate->question }}</h2> 
+            <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2> 
             {{ debate_form template="_tpl/sidebar_poll.tpl" submit_button="{{ #pollButton# }}" html_code="class=\"poll-button\"" }}  
             
             {{* this is to find out template id for this template, will have to be assigned as hidden form field *}}     
@@ -50,7 +50,7 @@
             {{ /debate_form }}                        
             
        {{ else }}                       
-            <h2>{{ $gimme->debate->question }}</h2> 
+            <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2> 
             {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}
             <p>{{ #thankYouPoll# }}</p>
             {{ /if }}  

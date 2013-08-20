@@ -4,11 +4,12 @@
         <header>
             <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time>
             {{ if $gimme->article->type_name == "news" }}
-            <a href="#comments" class="news-section-comments">
+            <a href="#comments"  class="news-section-comments">
+            <span aria-hidden="true" class="icon-bubble"></span>
                 {{ if $gimme->article->comment_count == 1 }}
-                    {{ $gimme->article->comment_count }} {{ #comment# }}
+                    {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
                 {{ else }}
-                    {{ $gimme->article->comment_count }} {{ #comments# }}
+                    {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
                 {{ /if }}
             </a>
             {{ /if }}
@@ -24,14 +25,14 @@
                     {{if $gimme->author->user->defined }}
                         </a>
                     {{/if}} 
-                    ({{ $gimme->author->type|lower }}) 
+                    <small>({{ $gimme->author->type }})</small>
                     {{ if !$gimme->current_list->at_end }}
                         , 
                     {{/if}}
                 {{/list_article_authors}}
                 </p>
-                {{ if $gimme->article->has_map }}
-                <p>{{ #locations# }}: 
+                {{ if !$gimme->article->has_map }}
+                <p><span aria-hidden="true" class="icon-location"></span> {{ #locations# }}: 
 
                 {{ list_article_locations }}
 
@@ -50,7 +51,7 @@
                 <p>
                 {{ list_article_topics }}
                     {{ if $gimme->current_list->at_beginning }}
-                        {{ #topics# }} 
+                        <span aria-hidden="true" class="icon-tags"></span> {{ #topics# }} 
                     {{ /if }}
                     <a href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>
                     {{ if $gimme->current_list->at_end }}

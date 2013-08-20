@@ -51,7 +51,6 @@
 		color: $black;
 		font-weight: bold;
 		@include font-size(18);
-		text-decoration: none;
 		display: block;
 		line-height: 1.2;
 	}
@@ -66,6 +65,7 @@
 		color: $d-green;
 		text-align: right;
 		display: block;
+		clear: both;
 	}
 }
 
@@ -80,7 +80,7 @@
 	a {margin-right: 0.5em;}
 }
 
-.news-sections-inner div {
+.news-sections-inner .news-sections-inner-alpha {
 	padding: 0.5em 0 0 0;
 	border-bottom: 1px solid #ddd;
 }
@@ -88,7 +88,6 @@
 .news-section-comments {
 	float: right;
 	color: $d-green;
-	text-decoration: none;
 	padding: 0.1em;
 	@include font-size(13);
 }

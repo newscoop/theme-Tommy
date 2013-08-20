@@ -21,11 +21,11 @@
     
     <nav id="nav-top" class="nav-alpha nav">
       <ul>
-        <li{{ if $gimme->template->name == "front.tpl" }} class="nav-current"{{ /if }}><a href="/">{{ #home# }}</a></li>
+        <li{{ if $gimme->template->name == "front.tpl" }} class="nav-current"{{ /if }}><a class="ease" href="/">{{ #home# }}</a></li>
         {{ local }}
         {{ set_current_issue }}
         {{ list_sections }}
-          <li{{ if ($gimme->section->number == $gimme->default_section->number) && ($gimme->template->name == "section.tpl" || $gimme->template->name == "article.tpl") }} class="nav-current"{{ /if }}><a href="{{ uri options="section" }}" title="{{ #allPostsUnder# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
+          <li{{ if ($gimme->section->number == $gimme->default_section->number) && ($gimme->template->name == "section.tpl" || $gimme->template->name == "article.tpl") }} class="nav-current"{{ /if }}><a class="ease" href="{{ uri options="section" }}" title="{{ #allPostsUnder# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
         {{ /list_sections }}
         {{ /local }}     
         </ul>

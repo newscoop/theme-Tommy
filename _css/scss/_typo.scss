@@ -21,6 +21,8 @@ h2 a {
 a {
 	@include font-size(14);
   color: $d-green;
+  text-decoration: none;
+  &:hover {text-decoration: underline;}
 }
 
 p {
