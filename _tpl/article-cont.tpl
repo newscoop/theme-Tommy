@@ -7,9 +7,9 @@
             <a href="#comments"  class="news-section-comments">
             <span aria-hidden="true" class="icon-bubble"></span>
                 {{ if $gimme->article->comment_count == 1 }}
-                    {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
+                    {{ $gimme->article->comment_count }} {{ #comment# }}
                 {{ else }}
-                    {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
+                    {{ $gimme->article->comment_count }} {{ #comments# }}
                 {{ /if }}
             </a>
             {{ /if }}
@@ -95,6 +95,7 @@
             </li>
             
         </ul>
+        {{ include file="_tpl/article-related.tpl"}}
         {{ include file="_tpl/article-attachments.tpl"}}
 
         {{ if $gimme->article->type_name == "news" }}

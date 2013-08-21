@@ -1,5 +1,13 @@
 .users-search {clear: both;}
 
+.user-edit-link {
+	padding: 0.3em;
+	background: $d-green;
+	color: #fff;
+	float: right;
+	text-decoration: none;
+}
+
 @media all and (min-width: 600px) {
 	.user-list .news-sections {
 		margin: 0 1%;
