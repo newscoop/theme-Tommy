@@ -1,0 +1,25 @@
+.pagination ul {
+	margin: 0;
+	padding: 1em 0 0 0;
+	height: 4em;
+	width: 100%;
+	li {list-style: none;}
+	a {
+		text-decoration: none;
+		display: block;
+		float: left;
+		padding: 0.2em 0.6em;
+		margin: 0 0.5em 1em 0;
+		border: 1px solid $l-green;
+		color: $black;
+		@include font-size(16);
+		&:hover {
+			color: #fff;
+			background: $d-green;
+		}
+	}
+	.active a {
+		background: $l-green;
+		font-weight: bold;
+	}
+}
