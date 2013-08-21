@@ -1,0 +1,154 @@
+.nav-top {
+  margin: 0;
+  padding: 0;
+  float: right;
+  li {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 $space;
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.nav-link {
+  position: relative;
+  color: transparent;
+  float: left;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  &:before {
+    content: "\2630";
+    color: #fff;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    background-color: $d-green;
+    @include font-size(26);
+  }
+}
+
+
+.nav-alpha {
+	clear: both;
+  background: rgba($black, 0.9);
+  position: absolute;
+  top: 118px;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  a {
+    @include font-size(18);
+    text-decoration: none;
+    color: $white;
+    line-height: 2;
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+  }
+}
+
+@media all and (min-width: 580px) {
+  .nav-alpha a {
+    width: 31%;
+  }
+}
+
+.nav-link-close {
+  display: none;
+}
+
+#body:target .nav-alpha {
+  height: 160px;
+  border: 1px solid $d-green;
+  border-width: 2px 0 1px 0;
+  padding: 0.5em 1em;
+  z-index: 100;
+  a {border-top: 1px solid $l-green;}
+}
+
+@media all and (min-width: 580px) {
+  #body:target .nav-alpha {height: 130px;}
+
+  .nav-alpha a {
+    width: 31%;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .nav-link {display: none;}
+
+  .nav-alpha {
+    display: block;
+    position: relative;
+    top: -35px;
+    max-width: 60%;
+    z-index: 20;
+    margin: 0 0 -2em 0;
+    border-bottom: 1px solid $d-green;
+    a {
+      @include font-size(16);
+      color: $d-green;
+      width: auto;
+      padding: 0 0.5em;
+      &:hover {
+        background: $d-green;
+        color: #fff;
+      }
+    }
+    .nav-current a {
+      background: $d-green;
+      color: #fff;
+    }
+  }
+}
+
+@media all and (min-width: 910px) {
+  .nav-alpha {max-width: 70%;}
+}
+
+@media all and (min-width: 1200px) {
+  .nav-alpha {
+    max-width: 60%;
+    position: absolute;
+    top: -13px;
+    left: 160px;
+    a {
+      color: #fff;
+      @include font-size(15);
+      margin: 0 0.1em;
+      padding-top: 1em;
+      &:hover {
+        background: #fff;
+        color: $d-green;
+      }
+    }
+    .nav-current a {
+      background: #fff;
+      color: $d-green;
+    }
+  }
+
+  .nav-top {
+    margin: 10px 0 0 0;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+
+#body:target .nav-link-close {display: block;}
+
+#body:target .nav-link-close:before {
+  -webkit-transform: rotate(90deg);
+}
+
+#body:target .nav-link-open {display: none;}
+

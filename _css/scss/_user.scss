@@ -1,0 +1,30 @@
+.users-search {clear: both;}
+
+@media all and (min-width: 600px) {
+	.user-list .news-sections {
+		margin: 0 1%;
+		width: 48%;
+		float: left;
+	}
+}
+
+@media all and (min-width: 460px) {
+	.user-image {
+		float: left;
+		margin: 0 1em 0 0;
+	}
+}
+
+.user-articles-list article {
+	border-bottom: 1px solid #ddd;
+	padding: 0.5em 0 2em 0
+}
+
+.user-feed {
+	a {
+		display: block;
+		padding: 0 0 1em 0;
+		border-bottom: 1px solid #ddd;
+	}
+	p {margin: 0}
+}
