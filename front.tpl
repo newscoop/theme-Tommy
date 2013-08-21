@@ -8,7 +8,7 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<main role="main" class="main site-front">
+<main role="main" class="main site-front" id="main">
     <div class="main-alpha">
     {{ include file="_tpl/front-stories.tpl" }}
     {{ include file="_tpl/section-stories.tpl" }}

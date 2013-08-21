@@ -1,3 +1,12 @@
+  <ul class="acc">
+    <li><a href="#main">Skip to content</a></li>
+    {{ local }}
+    {{ set_current_issue }}
+    {{ list_sections }}
+      <li{{ if ($gimme->section->number == $gimme->default_section->number) && ($gimme->template->name == "section.tpl" || $gimme->template->name == "article.tpl") }} class="nav-current"{{ /if }}><a href="{{ uri options="section" }}">Skip to {{ $gimme->section->name }}</a></li>
+    {{ /list_sections }}
+    {{ /local }}  
+  </ul>
   <header class="header-main clearfix">
     <ul class="nav-top">
       <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{ #community# }}</a></li>

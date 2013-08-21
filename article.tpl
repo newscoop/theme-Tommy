@@ -8,7 +8,7 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<div role="main" class="main site-article">
+<div role="main" class="main site-article" id="main">
     <div class="main-alpha">
     {{ if $gimme->article->type_name == "debate" }}
         {{ include file="_tpl/article-debate.tpl" }}

@@ -8,7 +8,7 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<section role="main" class="internal-page section-page">
+<section role="main" class="internal-page section-page" id="main">
     <div class="wrapper">
 
     {{ include file="_tpl/topic-header.tpl" }}
