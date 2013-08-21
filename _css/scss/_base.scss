@@ -98,3 +98,19 @@ img {
 	margin: 0 auto;
 	display: block;
 }
+
+/* info messages */
+.info {
+	padding: 0.5em;
+	box-shadow: 2px 2px 10px #ddd;
+}
+
+.info-success {
+	box-shadow: 2px 2px 10px $d-green;
+	span {color: $d-green;}
+}
+
+.info-error {
+	box-shadow: 2px 2px 10px red;
+	span {color: red;}
+}

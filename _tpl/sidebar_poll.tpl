@@ -5,9 +5,9 @@
     {{ if $gimme->debate_action->defined }}
         <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2>
         {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user || $gimme->debate_action->ok }}
-            <p>{{ #thankYouPoll# }}</p>
+            <p class="info info-success"><span aria-hidden="true" class="icon-checkmark-circle"></span> {{ #thankYouPoll# }}</p>
         {{ elseif $gimme->debate_action->is_error }}
-            <p>{{ #alreadyVoted# }}</p>
+            <p class="info info-error"><span aria-hidden="true" class="icon-blocked"></span> {{ #alreadyVoted# }}</p>
         {{ /if }}                        
 
         {{ assign var="votes" value=0 }}
@@ -52,7 +52,7 @@
        {{ else }}                       
             <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2> 
             {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}
-            <p>{{ #thankYouPoll# }}</p>
+            <p class="info info-success"><span aria-hidden="true" class="icon-checkmark-circle"></span> {{ #thankYouPoll# }}</p>
             {{ /if }}  
             {{ list_debate_answers }}
               <div class="poll-option">

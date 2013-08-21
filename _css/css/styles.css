@@ -625,6 +625,21 @@ img {
   margin: 0 auto;
   display: block; }
 
+/* info messages */
+.info {
+  padding: 0.5em;
+  box-shadow: 2px 2px 10px #ddd; }
+
+.info-success {
+  box-shadow: 2px 2px 10px #638c0b; }
+  .info-success span {
+    color: #638c0b; }
+
+.info-error {
+  box-shadow: 2px 2px 10px red; }
+  .info-error span {
+    color: red; }
+
 h1 {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 22px;
