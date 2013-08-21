@@ -1,8 +1,8 @@
 <!-- _tpl/article-comments.tpl-->
+{{ if $gimme->article->comment_count > 0 }}
 <section id="comments" class="article-attachments article-comments">
     <a href="#comment-form" class="article-comments-write">{{ #writeComment# }}</a>
     <h3>{{ #comments# }} ( {{ $gimme->article->comment_count}} )</h3>
-    
     <ul>
         {{list_article_comments order="bydate desc"}}
         <li id="comment-{{$gimme->current_list->index}}" class="article-comment">
@@ -28,6 +28,7 @@
     
     </ul>
 </section>
+{{ /if }}
 
 <!-- COMMENT FORM -->
 <section id="comment-form" class="article-attachments article-comments">

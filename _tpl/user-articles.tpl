@@ -15,7 +15,7 @@
                 {{ /if }}
             </a> 
             <h3><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h3>
-            {{ include file='_tpl/img/img_130x70.tpl'}}
+            {{ include file='_tpl/img/img_thumb.tpl'}}
             {{ $gimme->article->full_text|truncate:100:"...":true }}
             <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>
             {{ if !$gimme->article->content_accessible }}

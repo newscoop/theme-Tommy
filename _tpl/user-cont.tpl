@@ -12,7 +12,11 @@
             </a>
             
             <p>{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:"%Y-%m-%d" }} 06:00:00</time></p>
-            <p>{{ $user->posts_count }}&nbsp;{{ #posts# }}</p>
+            {{ if $user->posts_count > 0 }}
+                <p>{{ $user->posts_count }}&nbsp;{{ #posts# }}</p>
+            {{ else }}
+                <p>no&nbsp;{{ #posts# }} yet</p>
+            {{ /if }}
         </article>
         {{ /foreach }}      
 </section>

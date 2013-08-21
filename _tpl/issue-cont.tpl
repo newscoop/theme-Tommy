@@ -1,20 +1,24 @@
-<div class="span8 section-articles">
 {{ list_sections }}  
 {{ list_articles }}
 {{ if $gimme->current_articles_list->at_beginning }}
-    <section class="archive-block">
-        <h1 class="block-title">{{ $gimme->section->name}}</h1>
-        <hr>
+    <section>
+        <h1>{{ $gimme->section->name}}</h1>
 {{ /if }}    
-        <article class="section-article archive-entry">
-            {{ include file='_tpl/img/img_130x70.tpl' }}
-                <header>
-                    <h2><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
-                </header>
-                <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span><br>
-                <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span>
-                                       
-            <div class="clearfix"></div>
+       <article class="news-sections clearfix">
+            <h2><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
+            {{ include file='_tpl/img/img_thumb.tpl' }}
+            <p>{{ #publishedOn# }} 
+                <time datetime="{{ $gimme->issue->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->issue->publish_date|camp_date_format:"%d %M %Y" }}</time>
+                <a href="{{ uri option='article'}}#comments" class="news-section-comments">
+                <span aria-hidden="true" class="icon-bubble"></span>
+                    {{ if $gimme->article->comment_count == 1 }}
+                        {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
+                    {{ else }}
+                        {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
+                    {{ /if }}
+                </a>
+            </p>
+            {{ $gimme->article->full_text|truncate:130:"...":true }}
         </article>
 {{ if $gimme->current_articles_list->at_end }}
 
@@ -23,4 +27,3 @@
 {{ /if }}
 {{ /list_articles }}    
 {{ /list_sections }}
-</div>

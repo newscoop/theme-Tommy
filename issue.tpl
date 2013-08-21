@@ -1,31 +1,22 @@
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
-<body>
+<body id="body">
 <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
           
 {{ include file="_tpl/header.tpl" }}
 
-<section role="main" class="internal-page section-page">
-    <div class="wrapper">
-
-    {{ include file="_tpl/issue-header.tpl" }}
-
-        <div class="container">
-            <section id="content">
-                <div class="row home-featured-news">
-
-                {{ include file="_tpl/issue-cont.tpl" }}
-
-                {{ include file="_tpl/sidebar.tpl" }}          
-
-                </div> <!--end div class="row"-->
-            </section> <!-- end section id=content -->
-        </div> <!-- end div class='container' -->
-    </div> <!-- end div class='wrapper' -->
-</section> <!-- end section role main -->
+<div role="main" class="main site-archive">
+    <div class="main-alpha">
+    {{ include file="_tpl/issue-cont.tpl" }}
+    </div>
+    <div class="main-beta clearfix">
+        {{ include file="_tpl/sidebar_poll.tpl" }}
+        {{ include file="_tpl/sidebar_comments.tpl" }}
+    </div>
+</div> <!-- end main role main -->
 
 {{ include file="_tpl/footer.tpl" }}
 

@@ -73,7 +73,7 @@
             {{ /foreach }}
 
             {{ if !$has_slideshow > 0}}
-            {{ include file="_tpl/img/img_960x300.tpl"}}
+            {{ include file="_tpl/img/img_slider.tpl"}}
             {{ /if }}
         {{ /if }}
 

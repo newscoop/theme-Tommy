@@ -1,6 +1,6 @@
 <h1>{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} {{ if !$profile['first_name_public'] && !$profile['last_name_public'] }}{{$user->uname}}{{ /if }}</h1>
     <div class="user-contact">
-        <img src="{{ include file='_tpl/user-image.tpl' user=$user width=140 height=210 }}" alt="{{ #profilePicture# }}"> 
+        <img class="user-image" src="{{ include file='_tpl/user-image.tpl' user=$user width=140 height=210 }}" alt="{{ #profilePicture# }}"> 
         
         <p><b>{{ #gender# }}</b> {{ $profile['gender'] }}</p>
         <p><b>{{ #organisation# }}</b> {{ $profile['organisation']}}</p>

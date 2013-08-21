@@ -19,7 +19,7 @@
         {{ if !$gimme->article->content_accessible }}
         <span class="info info-premium">{{ #premium# }}</span>
         {{ /if }}
-        {{ $gimme->article->full_text|truncate:250:"...":true }}
+        {{ $gimme->article->full_text|truncate:420:"...":true }}
         <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>                                  
     </article>
     {{ else }}
@@ -41,7 +41,7 @@
         {{ if !$gimme->article->content_accessible }}
         <span class="info info-premium">{{ #premium# }}</span>
         {{ /if }}
-        {{ $gimme->article->full_text|truncate:250:"...":true }}
+        {{ $gimme->article->full_text|truncate:420:"...":true }}
         <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>  
     </article>
     {{ /if}}
