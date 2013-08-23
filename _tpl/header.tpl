@@ -13,6 +13,7 @@
       {{ if !$gimme->user->logged_in}}
       <li><a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}"> {{ #login# }} </a></li>
       {{ else }}
+      <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>{{ #profile# }}</a></li>
       <li><a href="{{ $view->url(['controller' => 'auth', 'action' =>'logout'], 'default') }}">{{ #logout# }}</a></li>
       {{ /if }}
     </ul>

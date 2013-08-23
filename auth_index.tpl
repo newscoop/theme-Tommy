@@ -13,7 +13,7 @@
         <form class="form" action="{{ $form->getAction() }}" class="zend_form" method="{{ $form->getMethod() }}">
             {{ if $form->isErrors() }}
             <div class="info info-error">
-                <h5>{{ #loginFailed# }}</h5>
+                <h5><span aria-hidden="true" class="icon-blocked"></span> {{ #loginFailed# }}</h5>
                 <p>{{ #loginFailedMessage# }}</p>
                 <p>{{ #tryAgainPlease# }}</p>
                 <p><a href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #forgotYourPassword# }}</a></p>

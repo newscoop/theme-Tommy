@@ -1,4 +1,9 @@
-<h1>{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} {{ if !$profile['first_name_public'] && !$profile['last_name_public'] }}{{$user->uname}}{{ /if }}</h1>
+<h1>{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} {{ if !$profile['first_name_public'] && !$profile['last_name_public'] }}{{$user->uname}}{{ /if }}
+
+{{ if $gimme->user->uname == $user->uname }}
+            <a class="user-edit-link" href='/dashboard'>Edit Profile </a>
+        {{ /if }}
+</h1>
     <div class="user-contact">
         <img class="user-image" src="{{ include file='_tpl/user-image.tpl' user=$user width=140 height=210 }}" alt="{{ #profilePicture# }}"> 
         

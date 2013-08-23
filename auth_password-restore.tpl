@@ -12,7 +12,7 @@
         <h1>{{ #resetPassword# }}</h1>
         {{ if $form->email->hasErrors() }}
          <div class="info info-error">
-             <h5>{{ #emailIsNotCorrect# }}</h5>
+             <h5<span aria-hidden="true" class="icon-blocked"></span> {{ #emailIsNotCorrect# }}</h5>
              <p>{{ #maybeYouRegistered# }} <em>{{ $gimme->publication->name }}</em> {{ #withAnotherEmail# }}</p>
          </div>
         {{ /if }}

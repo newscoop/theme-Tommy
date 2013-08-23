@@ -13,7 +13,7 @@
 		<div class="news-sections-inner">
 	{{ /if }}
 		{{ if $gimme->section->name != "Dialogue" }}
-			<h2>{{ $gimme->section->name}}</h2>
+			<h2><a href="{{ uri option='section'}}">{{ $gimme->section->name}}</a></h2>
 			{{ list_articles length="3" order="byPublishDate desc" }}
 			<div class="news-sections-inner-alpha">
 				<time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
@@ -28,7 +28,7 @@
 				</a>
 				{{ /if }}
 		        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
-		        {{ include file="_tpl/img/img_thumb.tpl" }}
+		        <a href="{{ uri option='article'}}">{{ include file="_tpl/img/img_thumb.tpl" }}</a>
 		        {{ $gimme->article->full_text|truncate:100:"...":true }}
 		        <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>
 		    </div>

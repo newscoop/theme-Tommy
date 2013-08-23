@@ -11,7 +11,7 @@
     <div class="main-alpha">
         <h1>{{ #userAccount# }}</h1>
         <div class="info info-success">
-            <h2 class="checkHeading">{{ #weSentYouAnEmail# }}</h2>
+            <h2><span aria-hidden="true" class="icon-checkmark-circle"></span> {{ #weSentYouAnEmail# }}</h2>
             <p>{{ #pleaseCheckYourInbox# }}</p>
         </div>
     </div>
