@@ -16,7 +16,8 @@
     {{ include file="_tpl/section-cont.tpl" }}
     </div>
     <div class="main-beta clearfix">
-        {{ include file="_tpl/section-sidebar.tpl" }}
+        {{ include file="_tpl/sidebar_comments.tpl" }}
+        {{ include file="_tpl/sidebar_ad.tpl" }}
     </div>                                          
 </main>
 

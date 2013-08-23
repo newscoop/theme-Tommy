@@ -3,7 +3,7 @@
 }
 
 html {
-	font: 62.5%/1.4 $beta-font;
+	font: 64.5%/1.4 $beta-font;
 	padding: 0;
 	color: $black;
 	overflow-x: hidden;
@@ -11,11 +11,11 @@ html {
 }
 
 @media all and (min-width: 900px) {
-	html {font: 65%/1.4 $beta-font;}
+	html {font: 71%/1.4 $beta-font;}
 }
 
 @media all and (min-width: 1300px) {
-	html {font: 72%/1.4 $beta-font;}
+	html {font: 80%/1.4 $beta-font;}
 }
 
 
