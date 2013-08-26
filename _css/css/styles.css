@@ -552,14 +552,17 @@ html {
   font: 64.5%/1.4 Arial, sans-serif;
   padding: 0;
   color: #111111;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0; }
 
 @media all and (min-width: 900px) {
   html {
-    font: 71%/1.4 Arial, sans-serif; } }
-@media all and (min-width: 1300px) {
+    font: 67%/1.4 Arial, sans-serif; } }
+@media all and (min-width: 1400px) {
   html {
-    font: 80%/1.4 Arial, sans-serif; } }
+    font: 78%/1.4 Arial, sans-serif; } }
 body {
   position: relative; }
 
@@ -760,6 +763,7 @@ input {
   .nav-link:before {
     content: "\2630";
     color: #fff;
+    font-family: sans-serif;
     left: 0;
     right: 0;
     text-align: center;
@@ -1059,6 +1063,9 @@ audio {
     color: #fff;
     font-size: 14px;
     font-size: 1.4rem; }
+
+#slider-front h2 a {
+  text-decoration: none; }
 
 @media all and (max-width: 500px) {
   .news-featured-inner {
