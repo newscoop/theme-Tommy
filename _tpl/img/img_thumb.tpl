@@ -1,4 +1,4 @@
-<div data-picture data-alt="{{ image rendition="sectiontop" }}{{ $image->caption }} (photo: {{ $image->photographer }}){{ /image }}">
+<div data-picture data-alt="{{ image rendition="thumbsmall" }}{{ $image->caption }} (photo: {{ $image->photographer }}){{ /image }}">
 		{{ image rendition="thumbsmall" }}
 			<div data-src="{{ $image->src }}"></div>
 		{{ /image }}
