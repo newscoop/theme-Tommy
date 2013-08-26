@@ -666,10 +666,6 @@ a {
   text-decoration: underline; }
   a:hover {
     text-decoration: none; }
-  a:focus {
-    text-decoration: none;
-    background: #638c0b;
-    color: #fff !important; }
 
 p {
   font-size: 14px;
@@ -1069,7 +1065,10 @@ audio {
     margin: 2em -1em; } }
 .slider-multimedia div h3 {
   right: auto;
-  left: 0; }
+  left: 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+  z-index: 1000; }
 
 .news-sections h2,
 .news-sections h2 a {
@@ -1078,7 +1077,8 @@ audio {
   color: #fff;
   font-weight: normal;
   font-family: "Merriweather Sans", sans-serif;
-  clear: both; }
+  clear: both;
+  text-decoration: none; }
 .news-sections h2 a {
   padding: 0; }
 .news-sections h3 {

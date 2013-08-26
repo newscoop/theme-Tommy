@@ -31,6 +31,8 @@
 .slider-multimedia div h3 {
 	right: auto;
 	left: 0;
+	@include font-size(12);
+	z-index: 1000;
 }
 
 .news-sections {
@@ -42,6 +44,7 @@
 		font-weight: normal;
 		font-family: $alpha-font;
 		clear: both;
+		text-decoration: none;
 	}
 	h2 a {padding: 0;}
 	h3 {
