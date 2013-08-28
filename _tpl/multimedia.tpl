@@ -49,7 +49,7 @@
                       <h3><span aria-hidden="true" class="icon-camera"></span> Image</h3>
                     {{ /if }}
               <a href="{{ uri options="article" }}">
-                {{ include file="_tpl/img/img_rectangle.tpl"}}
+                {{ include file="_tpl/img/img_rectangle.tpl" where="no"}}
               </a>
             </div>
             {{ /list_articles }}

@@ -3,22 +3,22 @@
 
 <body id="body">
 <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <p class="chromeframe">{{ #outdatedBrowser# }}</p>
 <![endif]-->
           
 {{ include file="_tpl/header.tpl" }}
 
 <main role="main" class="site-section" id="main">
     
-    <div class="main-alpha">
-    <h1>{{ $gimme->section->name }}</h1>
+    <section class="main-alpha">
+    	<h1>{{ $gimme->section->name }}</h1>
 
-    {{ include file="_tpl/section-cont.tpl" }}
-    </div>
-    <div class="main-beta clearfix">
+    	{{ include file="_tpl/section-cont.tpl" }}
+    </section>
+    <aside class="main-beta clearfix">
         {{ include file="_tpl/sidebar_comments.tpl" }}
         {{ include file="_tpl/sidebar_ad.tpl" }}
-    </div>                                          
+    </aside>                                          
 </main>
 
 {{ include file="_tpl/footer.tpl" }}
