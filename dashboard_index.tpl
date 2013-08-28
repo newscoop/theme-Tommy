@@ -3,23 +3,23 @@
 
 <body id="body">
 <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <p class="chromeframe">{{ #outdatedBrowser# }}</p>
 <![endif]-->
           
 {{ include file="_tpl/header.tpl" }}
 
-<div role="main" class="main site-archive">
-    <div class="main-alpha">
-    <h1>{{ #welcome# }} {{ $user->name }} <a class="user-edit-link" href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Show {{ #profile# }}</a></h1>
+<main role="main" class="main site-archive">
+    <section class="main-alpha">
+        <h1>{{ #welcome# }} {{ $user->name }} <a class="user-edit-link" href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>{{ #show# }} {{ #profile# }}</a></h1>
         <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" />
         <div class="form-user">
             {{ $form }}
         </div>
-    </div>
-    <div class="main-beta clearfix">
+    </section>
+    <aside class="main-beta clearfix">
         {{ include file="_tpl/user-sidebar.tpl" }}
-    </div>
-</div> <!-- end main role main -->
+    </aside>
+</main> <!-- end main role main -->
 
 {{ include file="_tpl/footer.tpl" }}
 

@@ -17,19 +17,16 @@
 .nav-link {
   position: relative;
   color: transparent;
-  float: left;
+  float: right;
   height: 40px;
   width: 40px;
-  margin: 0;
+  margin: 0.3em 0 0 0;
   &:before {
-    content: "\2630";
-    color: #fff;
-    font-family: sans-serif;
+    color: $d-green;
     left: 0;
     right: 0;
     text-align: center;
     position: absolute;
-    background-color: $d-green;
     @include font-size(26);
   }
 }
@@ -42,8 +39,12 @@
   top: 118px;
   left: 0;
   right: 0;
-  height: 0;
+  height: 0px;
   z-index: -1;
+  -webkit-transition: padding 0.8s;
+     -moz-transition: padding 0.8s;
+       -o-transition: padding 0.8s;
+          transition: padding 0.8s;
   a {
     @include font-size(18);
     text-decoration: none;

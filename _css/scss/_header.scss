@@ -4,16 +4,20 @@
 }
 
 .logo-alpha {
+  background: url(../../_img/tommy_black.png) no-repeat 0 0;
+  display: block;
+  height: 50px;
+  width: 300px;
+  text-indent: -2013em;
+}
+
+.svg .logo-alpha {
 	background: url(../../_img/tommy.svg) no-repeat 0 0;
-	display: block;
-	height: 50px;
-	width: 300px;
-	text-indent: -2013em;
 	background-size: 32%;
 }
 
 .search-field-alpha {
-  float: right;
+  float: left;
   text-align: right;
   padding: 0.5em 0 0 0;
   max-width: 80%;
@@ -29,6 +33,12 @@ input {
   background: #fff;
 }
 
+@media all and (min-width: 700px) {
+  .search-field-alpha {
+  float: right;
+  }
+}
+
 @media all and (min-width: 1200px) {
   .header-main {
     background: $d-green;
@@ -41,7 +51,7 @@ input {
     box-shadow: 2px 0 8px #111;
   }
 
-  .logo-alpha {
+  .svg .logo-alpha {
     background: url(../../_img/tommy_white.png) no-repeat 0 0;
     background-size: 37% auto;
   }
