@@ -9,6 +9,12 @@
 			<div data-src="{{ $image->src }}" data-media="(min-width: 641px)"></div>
 		{{ /image }}
 
+		<!--[if (lt IE 9) & (!IEMobile)]>
+        {{ image rendition="thumbbig" }}
+			<div data-src="{{ $image->src }}" data-media="(min-width: 641px)"></div>
+		{{ /image }}
+    	<![endif]-->
+
 		<noscript>
 		{{ image rendition="thumbsmall" }}
 			<img src="{{ $image->src }}" alt="{{ $image->caption }} (photo: {{ $image->photographer }})">
