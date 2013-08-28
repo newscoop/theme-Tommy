@@ -6,7 +6,6 @@ html {
 	font: 64.5%/1.4 $beta-font;
 	padding: 0;
 	color: $black;
-	overflow-x: hidden;
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -24,6 +23,11 @@ html {
 
 body {
 	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
 
 .main,

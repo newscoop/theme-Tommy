@@ -19,6 +19,7 @@
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Use the following CSS code if you want to have a class per icon */
@@ -27,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-camera, .icon-music, .icon-image, .icon-images, .icon-home, .icon-play, .icon-bullhorn, .icon-books, .icon-tag, .icon-tags, .icon-pushpin, .icon-location, .icon-print, .icon-calendar, .icon-calendar-2, .icon-bubble, .icon-bubble-2, .icon-user, .icon-users, .icon-zoom-in, .icon-zoom-out, .icon-cog, .icon-remove, .icon-list, .icon-earth, .icon-attachment, .icon-heart, .icon-thumbs-up, .icon-info, .icon-checkmark-circle, .icon-blocked, .icon-play-2, .icon-pause, .icon-stop, .icon-checkmark, .icon-close, .icon-google-plus, .icon-facebook, .icon-twitter, .icon-feed, .icon-mail {
+.icon-camera, .icon-music, .icon-image, .icon-images, .icon-home, .icon-play, .icon-bullhorn, .icon-books, .icon-tag, .icon-tags, .icon-pushpin, .icon-location, .icon-print, .icon-calendar, .icon-calendar-2, .icon-bubble, .icon-bubble-2, .icon-user, .icon-users, .icon-zoom-in, .icon-zoom-out, .icon-cog, .icon-remove, .icon-list, .icon-earth, .icon-attachment, .icon-heart, .icon-thumbs-up, .icon-info, .icon-checkmark-circle, .icon-blocked, .icon-play-2, .icon-pause, .icon-stop, .icon-checkmark, .icon-close, .icon-google-plus, .icon-facebook, .icon-twitter, .icon-feed, .icon-mail, .icon-menu {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -159,4 +160,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-mail:before {
 	content: "\e028";
+}
+.icon-menu:before {
+	content: "\e029";
 }
