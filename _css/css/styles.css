@@ -424,6 +424,15 @@ you can use the generic selector below, but it's slower:
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
+.iemobile .icon-camera, .iemobile .icon-music, .iemobile .icon-image, .iemobile .icon-images, .iemobile .icon-home, .iemobile .icon-play, .iemobile .icon-bullhorn, .iemobile .icon-books, .iemobile .icon-tag,
+.iemobile .icon-tags, .iemobile .icon-pushpin, .iemobile .icon-location, .iemobile .icon-print, .iemobile .icon-calendar, .iemobile .icon-calendar-2,
+.iemobile .icon-bubble, .iemobile .icon-bubble-2, .iemobile .icon-user, .iemobile .icon-users, .iemobile .icon-zoom-in, .iemobile .icon-zoom-out,
+.iemobile .icon-cog, .iemobile .icon-remove, .iemobile .icon-list, .iemobile .icon-earth, .iemobile .icon-attachment, .iemobile .icon-heart,
+.iemobile .icon-thumbs-up, .iemobile .icon-info, .iemobile .icon-checkmark-circle, .iemobile .icon-blocked, .iemobile .icon-play-2,
+.iemobile .icon-pause, .iemobile .icon-stop, .iemobile .icon-checkmark, .iemobile .icon-close, .iemobile .icon-google-plus, .iemobile .icon-facebook,
+.iemobile .icon-twitter, .iemobile .icon-feed, .iemobile .icon-mail, .iemobile .icon-menu {
+  display: none; }
+
 .icon-camera:before {
   content: "\e000"; }
 
@@ -787,6 +796,11 @@ input {
     position: absolute;
     font-size: 26px;
     font-size: 2.6rem; }
+
+.iemobile .nav-link {
+  display: block !important; }
+  .iemobile .nav-link :before {
+    background: #638c0b !important; }
 
 .nav-alpha {
   clear: both;
