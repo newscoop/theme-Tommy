@@ -20,8 +20,8 @@
 
     <a class="logo-alpha" href="http://{{ $gimme->publication->site }}">Tommy</a></h1>
 
-    <a href="#body" class="nav-link nav-link-open"> {{ #sections# }}</a>
-    <a href="#" class="nav-link nav-link-close"> {{ #sections# }}</a>
+    <a href="#body" class="nav-link nav-link-open icon-list"> {{ #sections# }}</a>
+    <a href="#" class="nav-link nav-link-close icon-list"> {{ #sections# }}</a>
 
     {{ search_form template="search.tpl" submit_button="Search" html_code="role=\"search\" class=\"search-field-alpha\""}}
       <label class="acc" for="f_search_keywords">{{ #search# }}</label>
