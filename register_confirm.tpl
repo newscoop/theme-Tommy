@@ -10,7 +10,9 @@
 <main role="main" class="main site-register">
     <section class="main-alpha">
         <h1>{{ #pleaseFillYourData# }}</h1>
+        <div class="form-user">
         {{ $form }}
+        </div>
     </section> 
     <aside class="main-beta clearfix">
         {{ include file="_tpl/user-sidebar.tpl" }}          

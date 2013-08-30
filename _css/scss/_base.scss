@@ -107,7 +107,8 @@ img {
 }
 
 /* info messages */
-.info {
+.info,
+.errors {
 	padding: 0.5em;
 	box-shadow: 2px 2px 10px #ddd;
 }
@@ -117,7 +118,8 @@ img {
 	span {color: $d-green;}
 }
 
-.info-error {
+.info-error,
+.errors li {
 	box-shadow: 2px 2px 10px red;
 	span {color: red;}
 }
