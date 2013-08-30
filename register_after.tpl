@@ -10,8 +10,9 @@
 <main role="main" class="main site-register">
     <section class="main-alpha">
 		<h1>{{ #confirmationHasBeenSent# }}</h1>
+		<p class="info info-success"><span aria-hidden="true" class="icon-checkmark-circle"></span> {{ #thanksForRegistering# }}</p>
 		<p>{{ #followTheSteps# }}</p>
-		<p>{{ #thanksForRegistering# }}</p>
+		
 	</section>
 	<aside class="main-beta clearfix">
         {{ include file="_tpl/user-sidebar.tpl" }}          

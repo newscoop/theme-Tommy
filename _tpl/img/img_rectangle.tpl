@@ -14,6 +14,11 @@
 		<div data-src="{{ $image->src }}" data-media="(min-width: 640px)"></div>
 	{{ /image }}
 
+	<!--[if (lt IE 9) & (!IEMobile)]>
+        {{ image rendition="rectanglebig" }}
+			<div data-src="{{ $image->src }}" data-media="(min-width: 640px)"></div>
+		{{ /image }}
+    <![endif]-->
 	<noscript>
 	{{ image rendition="rectanglesmall" }}
 		<img src="{{ $image->src }}" alt="{{ $image->caption }} (photo: {{ $image->photographer }})">
