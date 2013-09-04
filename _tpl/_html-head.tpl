@@ -43,6 +43,8 @@
        <script>window.html5 || document.write('<script src="{{ url static_file='_js/vendor/html5shiv.js'}}"><\/script>')</script>
        <script src="{{ url static_file="_js/respond.js" }}"></script>
    <![endif]-->
+
+   <!-- Check for svg support -->
    <script>
     var issvg=function(){var div=document.createElement("div");div.innerHTML="<svg/>";return(div.firstChild&&div.firstChild.namespaceURI)==="http://www.w3.org/2000/svg"};if(issvg())document.documentElement.className="svg js";else document.documentElement.className=" js";
     </script>

@@ -5,5 +5,5 @@
 {{ if $deadline->getTimestamp() > time() }}
     <p class="pull-right">{{ $diff->days }} {{ #days# }}, {{ $diff->h }} {{ #hours# }}, {{ $diff->i }} {{ #minutes# }} {{ #more# }}</p>
 {{ else }}
-    <p class="pull-right">{{ #discussionClosedOn# }} {{ $deadline->format('j.n.Y') }} at noon</p>	      
-{{ /if }}   
+    <p class="pull-right">{{ #discussionClosedOn# }} {{ $deadline->format('j.n.Y') }} {{ #atNoon# }} </p>	      
+{{ /if }}

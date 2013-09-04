@@ -1,7 +1,7 @@
 {{ list_related_articles }}
 	{{ if $gimme->current_list->at_beginning }}
 	<div class="news-sections news-article-related">
-		<h2>Related articles</h2>
+		<h2> {{ #relatedArticles# }}</h2>
     {{ /if }}
 	{{ if $gimme->article->type_name == "news" }}
     	<h3><a href="{{ uri }}">{{ $gimme->article->name }}</a></h3>

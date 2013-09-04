@@ -14,7 +14,7 @@
             <a href="{{ uri option='article'}}#comments" class="news-section-comments">{{ #writeComment# }}</a>
         {{ /if }}
         <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
-        <span class="article-author">By
+        <span class="article-author">{{ #By# }}
         {{ list_article_authors }}
             {{ if $gimme->author->type == "Author" }}
                 {{ if $gimme->author->user->defined}}
