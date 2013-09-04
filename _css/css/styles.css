@@ -722,7 +722,7 @@ figure + p:first-letter {
 
 .svg .logo-alpha {
   background: url(../../_img/tommy.svg) no-repeat 0 0;
-  background-size: 32%; }
+  background-size: 100% auto; }
 
 .search-field-alpha {
   float: left;
@@ -757,7 +757,7 @@ input {
 
   .svg .logo-alpha {
     background: url(../../_img/tommy_white.png) no-repeat 0 0;
-    background-size: 37% auto; }
+    background-size: 100% auto; }
 
   .main,
   main {

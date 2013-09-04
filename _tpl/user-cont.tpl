@@ -15,7 +15,7 @@
             {{ if $user->posts_count > 0 }}
                 <p>{{ $user->posts_count }}&nbsp;{{ #posts# }}</p>
             {{ else }}
-                <p>no&nbsp;{{ #posts# }} yet</p>
+                <p>{{ #noPosts# }}</p>
             {{ /if }}
         </article>
         {{ /foreach }}      

@@ -9,6 +9,6 @@
             <li class="star_5 ratings_stars">5 {{ #outOf# }} 5</li>
         </ul>
         <p class="total_votes"></p>
-        <p class="rating_error"></p>
+        <p class="rating_error info info-error"></p>
     </div>
 </div>
