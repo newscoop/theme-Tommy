@@ -79,7 +79,8 @@
 
         {{ include file="_tpl/_edit-article.tpl" }}
         <div class="article-fulltext">
-        {{ $gimme->article->full_text }}
+            {{ $gimme->article->full_text }}
+        </div>
         <ul class="article-social">
             <li>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>

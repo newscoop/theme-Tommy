@@ -29,7 +29,7 @@
     {{ /search_form }}
 
     
-    <nav id="nav-top" class="nav-alpha nav">
+    <nav id="nav-top" class="nav-alpha nav" role="navigation">
       <ul>
         <li{{ if $gimme->template->name == "front.tpl" }} class="nav-current"{{ /if }}><a class="ease" href="/">{{ #home# }}</a></li>
         {{ local }}
