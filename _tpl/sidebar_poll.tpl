@@ -11,6 +11,7 @@
         {{ /if }}                        
 
         {{ assign var="votes" value=0 }}
+        <fieldset id="debate_1_1_form">
         {{ list_debate_answers }}
           <div class="poll-option">
               <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}</label>
@@ -24,7 +25,7 @@
             <p>Number of votes: {{ $votes }}</p>
             {{ /if }}
         {{ /list_debate_answers }}
-
+        </fieldset>
     {{ else }}
        {{ if $gimme->debate->is_votable }}
 
@@ -35,6 +36,7 @@
             {{ $uriAry=explode("tpl=", {{ uri options="template _tpl/sidebar_poll.tpl" }}, 2) }}                        
 
             <input name="tpl" value="{{ $uriAry[1] }}" type="hidden">
+            <fieldset id="debate_1_1_form">
             {{ list_debate_answers }}
               <div class="poll-option">
                   <!--input type="radio" id="radio{{ $gimme->current_list->index }}" name="radios1" /-->
@@ -48,12 +50,13 @@
               </div>
             {{ /list_debate_answers }}
             {{ /debate_form }}                        
-            
+            </fieldset>
        {{ else }}                       
             <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2> 
             {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}
             <p class="info info-success"><span aria-hidden="true" class="icon-checkmark-circle"></span> {{ #thankYouPoll# }}</p>
-            {{ /if }}  
+            {{ /if }}
+            <fieldset id="debate_1_1_form">
             {{ list_debate_answers }}
               <div class="poll-option">
                   <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}
@@ -64,7 +67,7 @@
                   </div>
               </div>
             {{ /list_debate_answers }}
-
+             </fieldset>
        {{ /if }}
     {{ /if }}
     {{ /list_debates }}

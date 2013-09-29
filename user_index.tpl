@@ -14,7 +14,6 @@
     {{ include file="_tpl/user-cont.tpl" }}
     </section>
     <aside class="main-beta clearfix">
-        {{ include file="_tpl/sidebar_poll.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
     </aside>
 </main> <!-- end main role main -->

@@ -5,24 +5,26 @@
     {{ if $gimme->article->type_name == "news" }}
     <article class="news-sections">
         <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
+        {{ if $gimme->article->comment_count > 0 }}
         <a href="{{ uri option='article'}}#comments" class="news-section-comments">
-        {{ if $gimme->article->comment_count == 1 }}
-            {{ $gimme->article->comment_count }} {{ #comment# }}
-        {{ else }}
-            {{ $gimme->article->comment_count }} {{ #comments# }}
-        {{ /if }}
-
+        <span aria-hidden="true" class="icon-bubble"></span>
+            {{ if $gimme->article->comment_count == 1 }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }} {{ #for# }} {{ $gimme->article->name }}</span>
+            {{ else }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }} {{ #for# }} {{ $gimme->article->name }}</span>
+            {{ /if }}
         </a>
+        {{ /if }}
+        {{ if !$gimme->article->content_accessible }}
+        <span class="label label-premium">{{ #premium# }}</span>
+        {{ /if }}
         <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
         <a href="{{ uri options="article" }}">
             {{ include file="_tpl/img/img_130x70.tpl" }}
         </a>
-        {{ if !$gimme->article->content_accessible }}
-        <span class="label label-important normal-weight">{{ #premium# }}</span>
-        {{ /if }}
         <p class="article-excerpt">
             {{ $gimme->article->deck }}
-            <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>  
+            <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>  
         </p>  
     </article>
     {{ /if }}

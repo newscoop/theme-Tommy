@@ -70,7 +70,8 @@ main {
 	left: -599em;
 }
 
-.acc:focus {
+.acc:focus,
+.acc:focus * {
 	color: #000;
 	background: #fff;
 	border: 1px solid #000;

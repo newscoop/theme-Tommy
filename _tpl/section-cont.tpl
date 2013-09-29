@@ -2,16 +2,16 @@
     <article class="news-sections clearfix">
         <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
         {{ if $gimme->article->comment_count > 0 }}
-            <a href="{{ uri option='article'}}#comments" class="news-section-comments">
-            <span aria-hidden="true" class="icon-bubble"></span>
-                    {{ if $gimme->article->comment_count == 1 }}
-                        {{ $gimme->article->comment_count }} {{ #comment# }}
-                    {{ else }}
-                        {{ $gimme->article->comment_count }} {{ #comments# }}
-                    {{ /if }}
-            </a>
+        <a href="{{ uri option='article'}}#comments" class="news-section-comments">
+        <span aria-hidden="true" class="icon-bubble"></span>
+            {{ if $gimme->article->comment_count == 1 }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }} {{ #for# }} {{ $gimme->article->name }}</span>
+            {{ else }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }} {{ #for# }} {{ $gimme->article->name }}</span>
+            {{ /if }}
+        </a>
         {{ else }}
-            <a href="{{ uri option='article'}}#comments" class="news-section-comments">{{ #writeComment# }}</a>
+            <a href="{{ uri option='article'}}#comments" class="news-section-comments">{{ #writeComment# }} <span class="acc">{{ #for# }} {{ $gimme->article->name }}</span></a>
         {{ /if }}
         <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
         <span class="article-author">{{ #By# }}
@@ -41,7 +41,7 @@
         <span class="info info-premium">{{ #premium# }}</span>
         {{ /if }}
         {{ $gimme->article->full_text|truncate:420:"...":true }}
-        <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>  
+        <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>  
     </article>
 
     {{ if $gimme->current_list->at_end }}            
