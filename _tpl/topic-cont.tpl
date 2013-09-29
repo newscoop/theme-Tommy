@@ -23,7 +23,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri options="article" }}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
+                <a href="{{ uri options="article" }}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
             </div>                                        
             <div class="clearfix"></div>
         </article>
@@ -50,7 +50,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
+                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
             </div>
             <div class="clearfix"></div>
         </article>

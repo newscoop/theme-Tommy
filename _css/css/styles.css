@@ -100,7 +100,7 @@ a:active {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0; }
 
 h2 {
   font-size: 1.5em;
@@ -616,7 +616,8 @@ main {
   position: absolute;
   left: -599em; }
 
-.acc:focus {
+.acc:focus,
+.acc:focus * {
   color: #000;
   background: #fff;
   border: 1px solid #000;
@@ -664,7 +665,7 @@ img {
   .errors li span {
     color: red; }
 
-h1 {
+.main h1 {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 22px;
   font-size: 2.2rem;
@@ -1435,8 +1436,10 @@ audio {
     clear: both;
     font-size: 16px;
     font-size: 1.6rem;
-    font-weight: normal;
-    margin: 0; }
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    border-bottom: 1px solid #fff; }
   .footer-alpha ul {
     list-style: none;
     margin: 0;

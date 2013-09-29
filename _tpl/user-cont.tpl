@@ -8,7 +8,7 @@
         <article class="news-sections">
             <h2><a  href="{{ $view->url(['username' => $user->uname], 'user') }}">{{ $user->first_name }} {{ $user->last_name }}</a></h2>
             <a href="{{ $view->url(['username' => $user->uname], 'user') }}">
-                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=50 height=50 }}" alt="{{ $user->uname }}">
+                <img width="60" src="{{ include file="_tpl/user-image.tpl" user=$user width=50 height=50 }}" alt="{{ $user->uname }}">
             </a>
             
             <p>{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:"%Y-%m-%d" }} 06:00:00</time></p>
