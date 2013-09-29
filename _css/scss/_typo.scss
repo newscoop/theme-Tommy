@@ -1,4 +1,5 @@
-.main h1 {
+.main h1,
+.main .hl-alpha {
 	font-family: $alpha-font;
 	@include font-size(22);
 	font-weight: normal;

@@ -35,8 +35,8 @@
     {{ /list_article_images }}
     {{ /if }}
 
-    <link rel="shortcut icon" href="{{ url static_file='_img/favicon.ico' }}">
-    <link rel="apple-touch-icon" href="{{ url static_file='_img/apple-touch-icon.png' }}">
+    <link rel="shortcut icon" href="{{ url static_file='favicon.ico' }}">
+    <link rel="apple-touch-icon" href="{{ url static_file='apple-touch-icon.png' }}">
 
    <!--[if lt IE 9]>
        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>

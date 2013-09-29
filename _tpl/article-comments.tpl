@@ -56,7 +56,7 @@
                     {{ /if }}   
                 {{ /if }}
                 {{ comment_form html_code="id=\"commentform\" class=\"article-comment-form\"" _button="{{ #submitComment# }}" }}
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
                     {{* recaptcha *}}
                 {{ /comment_form }}
             {{ else }}

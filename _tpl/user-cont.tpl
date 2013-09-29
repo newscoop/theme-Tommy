@@ -1,4 +1,5 @@
 <form class="users-search" action="{{ $view->url(['controller' => 'user', 'action' => 'search'], 'default', true) }}" method="GET">
+    <label class="acc" for="q">{{ #search# }}</label>
     <input type="search" placeholder="{{ #searchUsers# }}" name="q">
     <input type="submit" value="{{ #search# }}">
 </form>

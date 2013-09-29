@@ -665,7 +665,8 @@ img {
   .errors li span {
     color: red; }
 
-.main h1 {
+.main h1,
+.main .hl-alpha {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 22px;
   font-size: 2.2rem;
@@ -1068,8 +1069,11 @@ audio {
     float: left;
     margin: 0 0 2.5em 0; }
 
-#newsletter-subscriber-label label {
-  width: 36%; }
+#newsletter-label,
+#newsletter-element,
+#attributes-email_public-label,
+#attributes-email_public-element {
+  display: none; }
 
 .news-featured-inner,
 .slider-multimedia div {

@@ -110,7 +110,9 @@
               $(widget).find('.star_' + avg).prevAll().andSelf().addClass('ratings_vote');
               $(widget).find('.star_' + avg).nextAll().removeClass('ratings_vote'); 
               $(widget).find('.total_votes').text(votes + ' {{ #voteS# }}, {{ #averageRating# }} ' + exact);
-              $(widget).find('.rating_error').text(error);
+              if (error) {
+                $(widget).find('.rating_error').addClass('info info-error').text(error);
+              }
           }
       }
       </script>
