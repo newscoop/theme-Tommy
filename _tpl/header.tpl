@@ -18,7 +18,7 @@
       {{ /if }}
     </ul>
 
-    <a class="logo-alpha" href="http://{{ $gimme->publication->site }}">Tommy</a></h1>
+    <h1><a class="logo-alpha" href="http://{{ $gimme->publication->site }}">Tommy</a></h1>
 
     <a href="#body" class="nav-link nav-link-open icon-list"> {{ #sections# }}</a>
     <a href="#" class="nav-link nav-link-close icon-list"> {{ #sections# }}</a>

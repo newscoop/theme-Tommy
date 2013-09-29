@@ -11,7 +11,7 @@
 <main role="main" class="site-section" id="main">
     
     <section class="main-alpha">
-    	<h1>{{ $gimme->section->name }}</h1>
+    	<h2>{{ $gimme->section->name }}</h2>
 
     	{{ include file="_tpl/section-cont.tpl" }}
     </section>

@@ -11,7 +11,7 @@
 
 		<!--[if (lt IE 9) & (!IEMobile)]>
         {{ image rendition="sliderbig" }}
-			<div data-src="{{ $image->src }}" data-media="(min-width: 640px)"></div>
+			<img src="{{ $image->src }}" alt="{{ $image->caption }} (photo: {{ $image->photographer }})">
 		{{ /image }}
     	<![endif]-->
 

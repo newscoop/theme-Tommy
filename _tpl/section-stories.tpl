@@ -21,16 +21,19 @@
 				<a href="{{ uri option='article'}}#comments" class="news-section-comments">
 				<span aria-hidden="true" class="icon-bubble"></span>
 					{{ if $gimme->article->comment_count == 1 }}
-						{{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }}</span>
+						{{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }} {{ #for# }} {{ $gimme->article->name }}</span>
 					{{ else }}
-						{{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }}</span>
+						{{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }} {{ #for# }} {{ $gimme->article->name }}</span>
 					{{ /if }}
 				</a>
 				{{ /if }}
+				 {{ if !$gimme->article->content_accessible }}
+        		<span class="label label-premium">{{ #premium# }}</span>
+        		{{ /if }}
 		        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
 		        <a href="{{ uri option='article'}}">{{ include file="_tpl/img/img_thumb.tpl" }}</a>
 		        {{ $gimme->article->full_text|truncate:100:"...":true }}
-		        <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }}</a>
+		        <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
 		    </div>
 	   	 	{{ /list_articles }}
 	   	{{ /if }}

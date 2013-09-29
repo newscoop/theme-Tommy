@@ -1,7 +1,7 @@
 3.2.9 (Media Mark)
-3b8a42958528ef2e9734ca343991f76aa273a1f9
+42d6541c8f242da8f19d3e77a760f307b9947c84
 o:Sass::Tree::RootNode
-:@template"™!/*! normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
+:@template"’!/*! normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
    HTML5 display definitions
@@ -127,7 +127,7 @@ a:active {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0;
 }
 
 h2 {
@@ -644,7 +644,7 @@ a:activeo;
 ;@ä;o;;{ ;[o;	;@ä;["h1;i};0;i};0;i};i};@;	T;i ;
 [o;;["font-size;i~;@;i ;
 [ ; ;!;o;";@;;#;"2emo;;["margin;i;@;i ;
-[ ; ;!;o;";@;;#;"0.67em 0;$["h1o;;o;;" ;[o;;[o;
+[ ; ;!;o;";@;;#;"0;$["h1o;;o;;" ;[o;;[o;
 ;@ ;o;;{ ;[o;	;@ ;["h2;i‚;0;i‚;0;i‚;i‚;@;	T;i ;
 [o;;["font-size;iƒ;@;i ;
 [ ; ;!;o;";@;;#;"
