@@ -13,7 +13,7 @@
     {{ include file="_tpl/front-stories.tpl" }}
     {{ include file="_tpl/section-stories.tpl" }}
     </section>
-    <aside class="main-beta clearfix">
+    <aside class="main-beta clearfix" role="complementary">
         {{ include file="_tpl/multimedia.tpl" }}
         {{ include file="_tpl/sidebar_ad.tpl" }}
         {{ include file="_tpl/sidebar_poll.tpl" }}

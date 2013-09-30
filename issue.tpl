@@ -12,8 +12,8 @@
     <section class="main-alpha">
     {{ include file="_tpl/issue-cont.tpl" }}
     </section>
-    <aside class="main-beta clearfix">
-        {{ include file="_tpl/sidebar_poll.tpl" }}
+    <aside class="main-beta clearfix" role="complementary">
+        {{ include file="_tpl/sidebar_ad.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
     </aside>
 </main>
