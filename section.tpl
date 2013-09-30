@@ -15,9 +15,10 @@
 
     	{{ include file="_tpl/section-cont.tpl" }}
     </section>
-    <aside class="main-beta clearfix">
+    <aside class="main-beta clearfix" role="complementary">
+    	{{ include file="_tpl/sidebar_ad.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
-        {{ include file="_tpl/sidebar_ad.tpl" }}
+        
     </aside>                                          
 </main>
 

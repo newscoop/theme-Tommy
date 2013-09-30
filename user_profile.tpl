@@ -12,7 +12,7 @@
     <section class="main-alpha">
         {{ include file="_tpl/user_profile-cont.tpl" }}
     </section>
-    <aside class="main-beta clearfix">
+    <aside class="main-beta clearfix" role="complementary">
         {{ if $user->isAuthor() }}
         {{ include file="_tpl/user-articles.tpl" }}          
         {{ else }}

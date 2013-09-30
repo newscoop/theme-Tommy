@@ -12,7 +12,7 @@
             {{ /if }}
         </a>
         {{ else }}
-            <a href="{{ uri option='article'}}#comments" class="news-section-comments">{{ #writeComment# }} <span class="acc">{{ #for# }} {{ $gimme->article->name }}</span></a>
+            
         {{ /if }}
         {{ if !$gimme->article->content_accessible }}
         <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>

@@ -7,7 +7,7 @@
     {{ /list_sections }}
     {{ /local }}  
   </ul>
-  <header class="header-main clearfix">
+  <header class="header-main clearfix" role="banner">
     <ul class="nav-top">
       <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{ #community# }}</a></li>
       {{ if !$gimme->user->logged_in}}
