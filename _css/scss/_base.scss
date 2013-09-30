@@ -73,10 +73,16 @@ main {
 .acc:focus,
 .acc:focus * {
 	color: #000;
+	position: static;
 	background: #fff;
 	border: 1px solid #000;
 	left: 0;
-	z-index:10;
+	z-index:1000;
+}
+
+*:focus {
+	background-color: #111 !important;
+	color: #fff !important;
 }
 
 .clearfix {
@@ -133,3 +139,5 @@ img {
 	padding: 2px 4px;
 	@include font-size(12);
 }
+
+.box-poll fieldset {border: none;}

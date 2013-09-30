@@ -15,7 +15,7 @@
           maxwidth: 960,
           auto: false,
           speed: 800,
-          nav: true,
+          pager: true,
           random: true,
           pause: true
         });
