@@ -17,13 +17,14 @@
                     {{ /if }}
                 </a>
                 {{ /if }}
+            {{ if !$gimme->article->content_accessible }}
+            <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
+            {{ /if }}
             <h3><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h3>
             {{ include file='_tpl/img/img_thumb.tpl'}}
             {{ $gimme->article->full_text|truncate:100:"...":true }}
             <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
-            {{ if !$gimme->article->content_accessible }}
-            <p>{{ #premium# }}</p>
-            {{ /if }}
+            
            
         </article>
 

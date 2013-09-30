@@ -414,7 +414,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-camera, .icon-music, .icon-image, .icon-images, .icon-home, .icon-play, .icon-bullhorn, .icon-books, .icon-tag, .icon-tags, .icon-pushpin, .icon-location, .icon-print, .icon-calendar, .icon-calendar-2, .icon-bubble, .icon-bubble-2, .icon-user, .icon-users, .icon-zoom-in, .icon-zoom-out, .icon-cog, .icon-remove, .icon-list, .icon-earth, .icon-attachment, .icon-heart, .icon-thumbs-up, .icon-info, .icon-checkmark-circle, .icon-blocked, .icon-play-2, .icon-pause, .icon-stop, .icon-checkmark, .icon-close, .icon-google-plus, .icon-facebook, .icon-twitter, .icon-feed, .icon-mail, .icon-menu {
+.icon-camera, .icon-music, .icon-image, .icon-images, .icon-home, .icon-play, .icon-bullhorn, .icon-books, .icon-tag, .icon-tags, .icon-pushpin, .icon-location, .icon-print, .icon-calendar, .icon-calendar-2, .icon-bubble, .icon-bubble-2, .icon-user, .icon-users, .icon-zoom-in, .icon-zoom-out, .icon-cog, .icon-remove, .icon-list, .icon-earth, .icon-attachment, .icon-heart, .icon-thumbs-up, .icon-info, .icon-checkmark-circle, .icon-blocked, .icon-play-2, .icon-pause, .icon-stop, .icon-checkmark, .icon-close, .icon-google-plus, .icon-facebook, .icon-twitter, .icon-feed, .icon-mail, .icon-menu, .icon-lock {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -423,15 +423,6 @@ you can use the generic selector below, but it's slower:
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
-
-.iemobile .icon-camera, .iemobile .icon-music, .iemobile .icon-image, .iemobile .icon-images, .iemobile .icon-home, .iemobile .icon-play, .iemobile .icon-bullhorn, .iemobile .icon-books, .iemobile .icon-tag,
-.iemobile .icon-tags, .iemobile .icon-pushpin, .iemobile .icon-location, .iemobile .icon-print, .iemobile .icon-calendar, .iemobile .icon-calendar-2,
-.iemobile .icon-bubble, .iemobile .icon-bubble-2, .iemobile .icon-user, .iemobile .icon-users, .iemobile .icon-zoom-in, .iemobile .icon-zoom-out,
-.iemobile .icon-cog, .iemobile .icon-remove, .iemobile .icon-list, .iemobile .icon-earth, .iemobile .icon-attachment, .iemobile .icon-heart,
-.iemobile .icon-thumbs-up, .iemobile .icon-info, .iemobile .icon-checkmark-circle, .iemobile .icon-blocked, .iemobile .icon-play-2,
-.iemobile .icon-pause, .iemobile .icon-stop, .iemobile .icon-checkmark, .iemobile .icon-close, .iemobile .icon-google-plus, .iemobile .icon-facebook,
-.iemobile .icon-twitter, .iemobile .icon-feed, .iemobile .icon-mail, .iemobile .icon-menu {
-  display: none; }
 
 .icon-camera:before {
   content: "\e000"; }
@@ -559,6 +550,9 @@ you can use the generic selector below, but it's slower:
 .icon-menu:before {
   content: "\e029"; }
 
+.icon-lock:before {
+  content: "\e02a"; }
+
 @-ms-viewport {
   width: device-width; }
 
@@ -660,10 +654,19 @@ img {
 
 .info-error,
 .errors li {
-  box-shadow: 2px 2px 10px red; }
+  box-shadow: 2px 2px 10px #ba1b1b; }
   .info-error span,
   .errors li span {
-    color: red; }
+    color: #ba1b1b; }
+
+.label-premium {
+  display: inline-block;
+  margin: 0 0 0 4px;
+  background: #ba1b1b;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-size: 1.2rem; }
 
 .main h1,
 .main .hl-alpha {

@@ -16,7 +16,7 @@
         </a>
         {{ /if }}
         {{ if !$gimme->article->content_accessible }}
-        <span class="label label-premium">{{ #premium# }}</span>
+        <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
         {{ /if }}
         <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
         <a href="{{ uri options="article" }}">

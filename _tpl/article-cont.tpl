@@ -109,7 +109,8 @@
 
     {{ else }}
     <header>
-        {{ #infoOnLockedArticles# }}
+        <h2 class="hl-alpha">{{ #infoOnLockedArticlesHeadline# }}</h2>
+        <p class="info info-error">{{ #infoOnLockedArticles# }}</p>
     </header>
     {{ /if }}
 

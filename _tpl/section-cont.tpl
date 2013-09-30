@@ -1,5 +1,6 @@
 {{ list_articles length="5" ignore_issue="true" constraints="type not poll" order="byPublishDate desc"}}
     <article class="news-sections clearfix">
+
         <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
         {{ if $gimme->article->comment_count > 0 }}
         <a href="{{ uri option='article'}}#comments" class="news-section-comments">
@@ -13,7 +14,10 @@
         {{ else }}
             <a href="{{ uri option='article'}}#comments" class="news-section-comments">{{ #writeComment# }} <span class="acc">{{ #for# }} {{ $gimme->article->name }}</span></a>
         {{ /if }}
-        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h3>
+        {{ if !$gimme->article->content_accessible }}
+        <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
+        {{ /if }}
+        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a> </h3>
         <span class="article-author">{{ #By# }}
         {{ list_article_authors }}
             {{ if $gimme->author->type == "Author" }}
@@ -37,9 +41,6 @@
             {{ include file="_tpl/img/img_rectangle.tpl" }}
         {{ /if }}
         </a>
-        {{ if !$gimme->article->content_accessible }}
-        <span class="info info-premium">{{ #premium# }}</span>
-        {{ /if }}
         {{ $gimme->article->full_text|truncate:420:"...":true }}
         <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>  
     </article>

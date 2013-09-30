@@ -121,6 +121,15 @@ img {
 
 .info-error,
 .errors li {
-	box-shadow: 2px 2px 10px red;
-	span {color: red;}
+	box-shadow: 2px 2px 10px #ba1b1b;
+	span {color: #ba1b1b;}
+}
+
+.label-premium {
+	display: inline-block;
+	margin: 0 0 0 4px;
+	background: #ba1b1b;
+	color: #fff;
+	padding: 2px 4px;
+	@include font-size(12);
 }

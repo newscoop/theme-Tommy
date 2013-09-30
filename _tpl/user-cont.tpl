@@ -12,7 +12,7 @@
                 <img width="60" src="{{ include file="_tpl/user-image.tpl" user=$user width=50 height=50 }}" alt="{{ $user->uname }}">
             </a>
             
-            <p>{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:"%Y-%m-%d" }} 06:00:00</time></p>
+            <p>{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|camp_date_format:'%M %e, %Y' }}">{{ $user->created|camp_date_format:"%M %e, %Y" }}</time></p>
             {{ if $user->posts_count > 0 }}
                 <p>{{ $user->posts_count }}&nbsp;{{ #posts# }}</p>
             {{ else }}
