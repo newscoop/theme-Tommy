@@ -15,9 +15,6 @@
         {{ include file="_tpl/search-cont.tpl" }}
     </section>
     <aside class="main-beta clearfix">
-        {{ include file="_tpl/multimedia.tpl" }}
-        {{ include file="_tpl/front-sidebar.tpl" }}
-        {{ include file="_tpl/sidebar_poll.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
     </aside>
 </main>

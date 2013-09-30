@@ -56,7 +56,7 @@
                     {{ /if }}   
                 {{ /if }}
                 {{ comment_form html_code="id=\"commentform\" class=\"article-comment-form\"" _button="{{ #submitComment# }}" }}
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
                     {{* recaptcha *}}
                 {{ /comment_form }}
             {{ else }}
@@ -84,7 +84,7 @@
                 {{ /if }}
 
                 {{ comment_form html_code="id=\"commentform\" class=\"article-comment-form\"" _button="{{ #submitComment# }}" }}
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
                     {{* recaptcha *}}
                 {{ /comment_form }}
             {{ else }}
@@ -109,9 +109,9 @@
 
 
                 {{ comment_form html_code="id=\"commentform\" class=\"article-comment-form\"" _button="{{ #submitComment# }}" }}
-                    {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\" placeholder=\"Your name\" " }}
-                    {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\" placeholder=\"Your Email\"" }}
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+                    {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\"  placeholder=\"Your name\" " }}
+                    {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\"  placeholder=\"Your Email\"" }}
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
                     {{* recaptcha *}}
 
                 {{ /comment_form }}

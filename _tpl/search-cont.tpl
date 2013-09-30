@@ -16,7 +16,7 @@
         </a>
         {{ /if }}
         {{ if !$gimme->article->content_accessible }}
-        <span class="label label-premium">{{ #premium# }}</span>
+        <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
         {{ /if }}
         <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
         <a href="{{ uri options="article" }}">
@@ -30,26 +30,26 @@
     {{ /if }}
 {{ if $gimme->current_list->at_end }}            
 
-{{* PAGINATION *}}
-{{ $pages=ceil($gimme->current_list->count/5) }}
-{{ $curpage=intval($gimme->url->get_parameter($gimme->current_list_id())) }}
-{{ if $pages gt 1 }}
-<ul class="pagination">
-    {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">{{ #previous# }}</a></li>{{ /if }}
-    {{ for $i=0 to $pages - 1 }}
-        {{ $curlistid=$i*5 }}
-        {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
-        {{ if $curlistid != $curpage }}
-    <li><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
-        {{ else }}
-    <li class="selected"><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
-        {{ $remi=$i+1 }}
-        {{ /if }}
-    {{ /for }}
-    {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">{{ #next# }}</a></li>{{ /if }}
-</ul>
-{{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}
-{{ /if }}
+    {{* PAGINATION *}}
+    {{ $pages=ceil($gimme->current_list->count/5) }}
+    {{ $curpage=intval($gimme->url->get_parameter($gimme->current_list_id())) }}
+    {{ if $pages gt 1 }}
+    <ul class="pagination">
+        {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a rel="prev" href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">{{ #previous# }}</a></li>{{ /if }}
+        {{ for $i=0 to $pages - 1 }}
+            {{ $curlistid=$i*5 }}
+            {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
+            {{ if $curlistid != $curpage }}
+        <li><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+            {{ else }}
+        <li class="selected"><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+            {{ $remi=$i+1 }}
+            {{ /if }}
+        {{ /for }}
+        {{ if $gimme->current_list->has_next_elements }}<li class="next"><a rel="next" href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">{{ #next# }}</a></li>{{ /if }}
+    </ul>
+    {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}
+    {{ /if }}
 
 {{ /if }}
 

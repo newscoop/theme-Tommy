@@ -73,10 +73,16 @@ main {
 .acc:focus,
 .acc:focus * {
 	color: #000;
+	position: fixed;
 	background: #fff;
 	border: 1px solid #000;
 	left: 0;
-	z-index:10;
+	z-index:1000;
+}
+
+*:focus {
+	background-color: #111 !important;
+	color: #fff !important;
 }
 
 .clearfix {
@@ -121,6 +127,17 @@ img {
 
 .info-error,
 .errors li {
-	box-shadow: 2px 2px 10px red;
-	span {color: red;}
+	box-shadow: 2px 2px 10px #ba1b1b;
+	span {color: #ba1b1b;}
 }
+
+.label-premium {
+	display: inline-block;
+	margin: 0 0 0 4px;
+	background: #ba1b1b;
+	color: #fff;
+	padding: 2px 4px;
+	@include font-size(12);
+}
+
+.box-poll fieldset {border: none;}

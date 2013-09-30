@@ -13,7 +13,7 @@
                 {{ /if }}
             </a>
             {{ /if }}
-            <h1>{{ $gimme->article->name }}</h1>
+            <h2 class="hl-alpha">{{ $gimme->article->name }}</h2>
             {{ if $gimme->article->type_name == "news" }}
                 
                 <p>{{ #By# }} 
@@ -109,7 +109,8 @@
 
     {{ else }}
     <header>
-        {{ #infoOnLockedArticles# }}
+        <h2 class="hl-alpha">{{ #infoOnLockedArticlesHeadline# }}</h2>
+        <p class="info info-error">{{ #infoOnLockedArticles# }}</p>
     </header>
     {{ /if }}
 

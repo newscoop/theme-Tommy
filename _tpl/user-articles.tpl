@@ -17,13 +17,14 @@
                     {{ /if }}
                 </a>
                 {{ /if }}
+            {{ if !$gimme->article->content_accessible }}
+            <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
+            {{ /if }}
             <h3><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h3>
             {{ include file='_tpl/img/img_thumb.tpl'}}
             {{ $gimme->article->full_text|truncate:100:"...":true }}
             <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
-            {{ if !$gimme->article->content_accessible }}
-            <p>{{ #premium# }}</p>
-            {{ /if }}
+            
            
         </article>
 
@@ -35,7 +36,7 @@
         {{ if $pages gt 1 }}
         <div class="pagination">
             <ul>
-                {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="previous_items" }}">&laquo;</a></li>{{ /if }}
+                {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a rel="prev" href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="previous_items" }}">&laquo;</a></li>{{ /if }}
                 {{ for $i=0 to $pages - 1 }}
                     {{ $curlistid=$i*5 }}
                     {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
@@ -46,7 +47,7 @@
                     {{ $remi=$i+1 }}
                     {{ /if }}
                 {{ /for }}
-                {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="next_items" }}">&raquo;</a></li>{{ /if }}
+                {{ if $gimme->current_list->has_next_elements }}<li class="next"><a rel="next" href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="next_items" }}">&raquo;</a></li>{{ /if }}
             </ul>
         </div>
         {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}

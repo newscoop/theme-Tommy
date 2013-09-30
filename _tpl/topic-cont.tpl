@@ -12,7 +12,7 @@
             </figure>
             <span class="link-color">{{ $gimme->article->section->name }}</span>
             {{ if !$gimme->article->content_accessible }}
-            <span class="label label-important normal-weight">{{ #premium# }}</span>
+            <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
             {{ /if }}
             <header>
                 <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
@@ -39,7 +39,7 @@
             </figure>
             <span class="link-color">{{ $gimme->article->section->name }}</span>
             {{ if !$gimme->article->content_accessible }}
-            <span class="label label-important normal-weight">{{ #premium# }}</span>
+            <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
             {{ /if }}
             <header>
                 <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
