@@ -9,20 +9,22 @@
         
         <p><b>{{ #gender# }}</b> {{ $profile['gender'] }}</p>
         <p><b>{{ #organisation# }}</b> {{ $profile['organisation']}}</p>
-        <p><b>{{ #website# }}</b> <a class="link-color" href="{{ $profile['website']}}" rel="nofollow">{{ $profile['website']|escape}}</a></p>
+        <p><b>{{ #website# }}</b> <a class="link-color" href="{{ $profile['website']}}" rel="external">{{ $profile['website']|escape}}</a></p>
         <p><b>{{ #birthday# }}</b> {{ $profile['birth_date'] }}</p>
         {{ if $profile['twitter'] }}
-        <p><b>Twitter</b> <a href="http://twitter.com/{{ $profile['twitter'] }}" rel="nofollow" >{{ $profile['twitter'] }}</a></p>
+        <p><b>Twitter</b> <a href="http://twitter.com/{{ $profile['twitter'] }}" rel="external" >{{ $profile['twitter'] }}</a></p>
         {{ /if }}
         {{ if $profile['facebook'] }}
-        <p><b>Facebook</b> <a href="http://facebook.com/{{ $profile['facebook'] }}" rel="nofollow" >{{ $profile['facebook'] }}</a></p>
+        <p><b>Facebook</b> <a href="http://facebook.com/{{ $profile['facebook'] }}" rel="external" >{{ $profile['facebook'] }}</a></p>
         {{ /if }}
         {{ if $profile['google'] }}
-        <p><b>Google+</b> <a href="http://plus.google.com/{{ $profile['google'] }}" rel="nofollow" >+{{ $profile['google'] }}</a></p>
+        <p><b>Google+</b> <a href="http://plus.google.com/{{ $profile['google'] }}" rel="external" >+{{ $profile['google'] }}</a></p>
         {{ /if }}
 
-        <p class="member-since">{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00</time></p>
+        <p class="member-since">{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|camp_date_format:"%M %e, %Y" }}</time></p>
+        {{ if $user->posts_count > 0 }}
         <p class="member-post">{{ $user->posts_count }} {{ #posts# }}</p>
+        {{ /if }}
     </div>
 {{ if $profile['bio'] }} 
 <div class="user-about news-sections">                                                                

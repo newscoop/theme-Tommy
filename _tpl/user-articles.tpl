@@ -36,7 +36,7 @@
         {{ if $pages gt 1 }}
         <div class="pagination">
             <ul>
-                {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="previous_items" }}">&laquo;</a></li>{{ /if }}
+                {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a rel="prev" href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="previous_items" }}">&laquo;</a></li>{{ /if }}
                 {{ for $i=0 to $pages - 1 }}
                     {{ $curlistid=$i*5 }}
                     {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
@@ -47,7 +47,7 @@
                     {{ $remi=$i+1 }}
                     {{ /if }}
                 {{ /for }}
-                {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="next_items" }}">&raquo;</a></li>{{ /if }}
+                {{ if $gimme->current_list->has_next_elements }}<li class="next"><a rel="next" href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters options="next_items" }}">&raquo;</a></li>{{ /if }}
             </ul>
         </div>
         {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}

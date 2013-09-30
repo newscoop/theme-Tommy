@@ -1,4 +1,4 @@
-  <ul>
+  <ul class="skiplinks">
     <li class="acc"><a href="#main">Skip to content</a></li>
     {{ local }}
     {{ set_current_issue }}

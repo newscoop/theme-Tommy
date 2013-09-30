@@ -97,6 +97,12 @@
           if (isSlideshow) {
             Galleria.loadTheme('{{ url static_file='_js/vendor/galleria/themes/classic/galleria.classic.min.js'}}');
             Galleria.run('#gallery');
+            Galleria.ready(function() {
+              this.attachKeyboard({
+                  right: this.next,
+                  left: this.prev
+              });
+            });
           }
       });
 

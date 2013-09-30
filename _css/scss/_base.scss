@@ -73,7 +73,7 @@ main {
 .acc:focus,
 .acc:focus * {
 	color: #000;
-	position: static;
+	position: fixed;
 	background: #fff;
 	border: 1px solid #000;
 	left: 0;

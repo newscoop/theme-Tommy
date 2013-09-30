@@ -21,6 +21,11 @@
 		background: $d-green;
 		color: #fff;
 		@include font-size(14);
+		a {
+			color: #fff;
+			font-weight: normal;
+			text-decoration: none;
+		}
 	}
 }
 
