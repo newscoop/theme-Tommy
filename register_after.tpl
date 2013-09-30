@@ -14,7 +14,7 @@
 		<p>{{ #followTheSteps# }}</p>
 		
 	</section>
-	<aside class="main-beta clearfix">
+	<aside class="main-beta clearfix" role="complementary">
         {{ include file="_tpl/user-sidebar.tpl" }}          
     </aside>
 </main>

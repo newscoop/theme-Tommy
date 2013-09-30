@@ -13,8 +13,8 @@
     {{ include file="_tpl/user-header.tpl" }}
     {{ include file="_tpl/user-cont.tpl" }}
     </section>
-    <aside class="main-beta clearfix">
-        {{ include file="_tpl/sidebar_comments.tpl" }}
+    <aside class="main-beta clearfix" role="complementary">
+        {{ include file="_tpl/user-sidebar.tpl" }}
     </aside>
 </main> <!-- end main role main -->
 

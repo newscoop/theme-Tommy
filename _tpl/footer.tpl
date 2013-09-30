@@ -1,4 +1,4 @@
-<footer class="footer-alpha clearfix">
+<footer class="footer-alpha clearfix" role="contentinfo">
     <div class="footer-main">
         <div>
             <h4>{{ #sections# }}</h4>
