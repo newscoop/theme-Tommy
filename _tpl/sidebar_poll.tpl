@@ -12,6 +12,7 @@
 
         {{ assign var="votes" value=0 }}
         <fieldset id="debate_1_1_form">
+          <legend class="acc">{{ $gimme->debate->question }}</legend>
         {{ list_debate_answers }}
           <div class="poll-option">
               <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}</label>
@@ -37,6 +38,7 @@
 
             <input name="tpl" value="{{ $uriAry[1] }}" type="hidden">
             <fieldset id="debate_1_1_form">
+              <legend class="acc">{{ $gimme->debate->question }}</legend>
             {{ list_debate_answers }}
               <div class="poll-option">
                   <!--input type="radio" id="radio{{ $gimme->current_list->index }}" name="radios1" /-->
@@ -57,6 +59,7 @@
             <p class="info info-success"><span aria-hidden="true" class="icon-checkmark-circle"></span> {{ #thankYouPoll# }}</p>
             {{ /if }}
             <fieldset id="debate_1_1_form">
+              <legend class="acc">{{ $gimme->debate->question }}</legend>
             {{ list_debate_answers }}
               <div class="poll-option">
                   <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}

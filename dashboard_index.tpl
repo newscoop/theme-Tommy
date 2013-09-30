@@ -11,7 +11,7 @@
 <main role="main" class="main site-archive">
     <section class="main-alpha">
         <h1>{{ #welcome# }} {{ $user->name }} <a class="user-edit-link" href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>{{ #show# }} {{ #profile# }}</a></h1>
-        <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" />
+        <img alt="{{ #profilePicture# }} {{ #from# }} {{ $user->name }}" src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" />
         <div class="form-user">
             {{ $form }}
         </div>

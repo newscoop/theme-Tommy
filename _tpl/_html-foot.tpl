@@ -15,7 +15,7 @@
           maxwidth: 960,
           auto: false,
           speed: 800,
-          nav: true,
+          pager: true,
           random: true,
           pause: true
         });
@@ -97,6 +97,12 @@
           if (isSlideshow) {
             Galleria.loadTheme('{{ url static_file='_js/vendor/galleria/themes/classic/galleria.classic.min.js'}}');
             Galleria.run('#gallery');
+            Galleria.ready(function() {
+              this.attachKeyboard({
+                  right: this.next,
+                  left: this.prev
+              });
+            });
           }
       });
 
@@ -110,7 +116,9 @@
               $(widget).find('.star_' + avg).prevAll().andSelf().addClass('ratings_vote');
               $(widget).find('.star_' + avg).nextAll().removeClass('ratings_vote'); 
               $(widget).find('.total_votes').text(votes + ' {{ #voteS# }}, {{ #averageRating# }} ' + exact);
-              $(widget).find('.rating_error').text(error);
+              if (error) {
+                $(widget).find('.rating_error').addClass('info info-error').text(error);
+              }
           }
       }
       </script>
