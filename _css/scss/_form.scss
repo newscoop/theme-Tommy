@@ -14,7 +14,15 @@
 	}
 }
 
-.form-user 
+.form-register #email,
+.site-pw #email {
+	max-width: 100%;
+	width: 60%;
+}
+
+.form-register .terms_of_use {
+	margin: 13px 0 0 0;
+}
 
 #image {max-width: 60%;}
 
@@ -47,6 +55,10 @@
 		float: left;
 		margin: 0 0 2.5em 0;
 	}
+}
+
+.site-pw .button {
+	max-width: 100%;
 }
 
 #newsletter-label,
