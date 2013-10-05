@@ -85,6 +85,11 @@ main {
 	color: #fff !important;
 }
 
+input:focus {
+	background-color: #f1f1f1 !important;
+	color: #000 !important;
+}
+
 .clearfix {
 	*display: inline-block;
 	&:after {
@@ -118,6 +123,10 @@ img {
 .errors {
 	padding: 0.5em;
 	box-shadow: 2px 2px 10px #ddd;
+	margin: 0 0 10px 0;
+	p {
+		margin: 0;
+	}
 }
 
 .info-success {
