@@ -12,8 +12,7 @@
         <h1>{{ #resetPassword# }}</h1>
         {{ if $form->email->hasErrors() }}
          <div class="info info-error">
-             <h5><span aria-hidden="true" class="icon-blocked"></span> {{ #emailIsNotCorrect# }}</h5>
-             <p>{{ #maybeYouRegistered# }} <em>{{ $gimme->publication->name }}</em> {{ #withAnotherEmail# }}</p>
+             <p><span aria-hidden="true" class="icon-blocked"></span> {{ #emailIsNotCorrect# }}</p>
          </div>
         {{ /if }}
         <form class="form" action="{{ $form->getAction() }}"  class="zend_form" method="{{ $form->getMethod() }}">
