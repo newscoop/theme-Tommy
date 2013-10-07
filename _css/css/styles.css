@@ -1074,7 +1074,7 @@ audio {
   max-width: 100%;
   width: 60%; }
 
-.form-register .terms_of_use {
+.form-register #terms_of_use {
   margin: 13px 0 0 0; }
 
 #image {
