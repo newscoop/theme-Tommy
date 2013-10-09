@@ -1,90 +1,71 @@
-<div class="span8 home-featured-news">
-    <!-- SECTION ARTICLES -->                                
-    <div class="row section-articles">
-    {{ list_articles length="5" ignore_issue="true" ignore_section="true"}}
-        {{ if $gimme->current_list->at_beginning }}            
-
-        <article class="span8 section-article section-featured">                                        
-            <figure class="pull-left article-image">
-                <a href="{{ uri options="article" }}">
-                    {{ include file='_tpl/img/img_330x215.tpl'}} 
-                </a>
-            </figure>
-            <span class="link-color">{{ $gimme->article->section->name }}</span>
-            {{ if !$gimme->article->content_accessible }}
-            <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
+<h2 class="hl-alpha"><small><span aria-hidden="true" class="icon-tags"></span> {{ #topics# }}</small> {{ $gimme->topic->name }}</h2>
+{{ list_articles length="8" ignore_issue="true" ignore_section="true" order="bynumber desc" }}
+    <article class="news-sections clearfix">
+        <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
+        {{ if $gimme->article->comment_count > 0 }}
+        <a href="{{ uri option='article'}}#comments" class="news-section-comments">
+        <span aria-hidden="true" class="icon-bubble"></span>
+            {{ if $gimme->article->comment_count == 1 }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }} {{ #for# }} {{ $gimme->article->name }}</span>
+            {{ else }}
+                {{ $gimme->article->comment_count }} <span class="acc">{{ #comments# }} {{ #for# }} {{ $gimme->article->name }}</span>
             {{ /if }}
-            <header>
-                <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
-            </header>
-            <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
-            <div class="article-excerpt hidden-phone">
-                {{ $gimme->article->full_text|truncate:255:"...":true }}
-            </div>  
-            <div class="article-links hidden-phone">
-                <hr>
-                <a href="{{ uri options="article" }}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
-            </div>                                        
-            <div class="clearfix"></div>
-        </article>
-
+        </a>
         {{ else }}
-
-        <article class="span8 section-article">
-            <figure class="pull-left article-image">
-                <a href="{{ uri options="article" }}">
-                    {{ include file='_tpl/img/img_202x152.tpl'}} 
-                    {{ include file='_tpl/img/img_225x150.tpl'}} 
-                </a>
-            </figure>
-            <span class="link-color">{{ $gimme->article->section->name }}</span>
-            {{ if !$gimme->article->content_accessible }}
-            <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
+            
+        {{ /if }}
+        {{ if !$gimme->article->content_accessible }}
+        <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
+        {{ /if }}
+        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a> </h3>
+        <span class="article-author">{{ #By# }}
+        {{ list_article_authors }}
+            {{ if $gimme->author->type == "Author" }}
+                {{ if $gimme->author->user->defined}}
+                    <a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">
+                {{/if}}
+                {{ $gimme->author->name }}
+                {{if $gimme->author->user->defined }}
+                    </a>
+                {{/if}} 
+                {{ if !$gimme->current_list->at_end }}
+                    , 
+                {{/if}}
             {{ /if }}
-            <header>
-                <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
-            </header>
-            <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
-            <div class="article-excerpt hidden-phone">
-                {{ $gimme->article->full_text|truncate:200:"...":true}}
-            </div>  
-            <div class="article-links hidden-phone">
-                <hr>
-                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>
-            </div>
-            <div class="clearfix"></div>
-        </article>
-        {{ /if}}
+        {{/list_article_authors}}
+        </span>                            
+        <a href="{{ uri options="article" }}">
+            {{ include file="_tpl/img/img_rectangle.tpl" }}
+        </a>
+        {{ $gimme->article->full_text|truncate:420:"...":true }}
+        <a class="link-more" href="{{ uri options="article" }}">{{ #readMore# }} <span class="acc">{{ #from# }} {{ $gimme->article->name }}</span></a>  
+    </article>
 
-        {{ if $gimme->current_list->at_end }}            
+    {{ if $gimme->current_list->at_end }}            
 
-        {{* PAGINATION *}}
-        {{ $pages=ceil($gimme->current_list->count/5) }}
-        {{ $curpage=intval($gimme->url->get_parameter($gimme->current_list_id())) }}
-        {{ if $pages gt 1 }}
-        <nav class="span8">
-            <div class="pagination">
-                <ul>
-                    {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">&laquo;</a></li>{{ /if }}
-                    {{ for $i=0 to $pages - 1 }}
-                        {{ $curlistid=$i*5 }}
-                        {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
-                        {{ if $curlistid != $curpage }}
-                    <li><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
-                        {{ else }}
-                    <li class="active disable"><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
-                        {{ $remi=$i+1 }}
-                        {{ /if }}
-                    {{ /for }}
-                    {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">&raquo;</a></li>{{ /if }}
-                </ul>
-            </div>
-        </nav>
-        {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}
-        {{ /if }}
-
-        {{ /if }}
-
-        {{ /list_articles }}    
+    {{* PAGINATION *}}
+    {{ $pages=ceil($gimme->current_list->count/5) }}
+    {{ $curpage=intval($gimme->url->get_parameter($gimme->current_list_id())) }}
+    {{ if $pages gt 1 }}
+    <div class="pagination">
+        <ul>
+            {{ if $gimme->current_list->has_previous_elements }}<li class="pagination-prev"><a rel="prev" href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">&laquo;</a></li>{{ /if }}
+            {{ for $i=0 to $pages - 1 }}
+                {{ $curlistid=$i*5 }}
+                {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
+                {{ if $curlistid != $curpage }}
+            <li><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+                {{ else }}
+            <li class="active"><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+                {{ $remi=$i+1 }}
+                {{ /if }}
+            {{ /for }}
+            {{ if $gimme->current_list->has_next_elements }}<li class="pagination-next"><a rel="next" href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">&raquo;</a></li>{{ /if }}
+        </ul>
     </div>
-</div>
+    {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}
+    {{ /if }}
+
+    {{ /if }}
+
+{{ /list_articles }}   

@@ -7,7 +7,7 @@
 
     <script src="{{ url static_file="_js/slider.js" }}"></script>
     <script>
-    window.innerWidth>500&&$(function(){$("#slider-front").addClass("news-slider"),$("#slider-front").responsiveSlides({maxwidth:960,auto:!1,speed:800,pager:!0,random:!0,pause:!0})}),$(function(){$("#slider-multimedia").responsiveSlides({maxwidth:330,auto:!1,speed:1200,pager:!1,random:!0,pause:!0})});
+    window.innerWidth>500&&$(function(){$("#slider-front").addClass("news-slider"),$("#slider-front").responsiveSlides({maxwidth:960,auto:!1,speed:800,pager:!0,nav:!0,random:!1,pause:!0})}),$(function(){$("#slider-multimedia").responsiveSlides({maxwidth:330,auto:!1,speed:1200,pager:!1,random:!0,pause:!0})});
     </script>
     {{ if $gimme->template->name == 'article.tpl'}}
       <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
@@ -120,6 +120,10 @@
       });
 
       $('.poll-button').click(function(){
+        if ($("input[name='f_debateanswer_nr']:checked").length === 0) {
+          $('.info-no-answer').show();
+          return false;
+        }
         $.post($('form[name=debate]').attr("action"),$('form[name=debate]').serialize(),function(data){$('.box-poll').html(data);});
         return false;
       });

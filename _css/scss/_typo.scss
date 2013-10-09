@@ -25,7 +25,8 @@ a {
   &:hover {text-decoration: none;}
 }
 
-p {
+p,
+h5 {
   @include font-size(14); 
   line-height: 1.6;
   margin: 0 0 20px 0;

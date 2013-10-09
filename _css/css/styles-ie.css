@@ -627,6 +627,9 @@ input:focus {
   background-color: #f1f1f1 !important;
   color: #000 !important; }
 
+body:focus {
+  background-color: #fff !important; }
+
 .clearfix {
   *display: inline-block; }
   .clearfix:after {
@@ -672,6 +675,9 @@ img {
   .errors li span {
     color: #ba1b1b; }
 
+.info-hidden {
+  display: none; }
+
 .label-premium {
   display: inline-block;
   margin: 0 0 0 4px;
@@ -712,7 +718,8 @@ a {
   a:hover {
     text-decoration: none; }
 
-p {
+p,
+h5 {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.6;
@@ -857,7 +864,7 @@ input {
   border: 1px solid #638c0b;
   border-width: 2px 0 1px 0;
   padding: 0.5em 1em;
-  z-index: 100; }
+  z-index: 1000; }
   #body:target .nav-alpha a {
     border-top: 1px solid #88bf11; }
 
@@ -871,47 +878,66 @@ input {
   .nav-link {
     display: none; }
 
-  .nav-alpha {
+  .nav-alpha,
+  #body:target .nav-alpha {
     display: block;
     position: relative;
     top: -35px;
     max-width: 60%;
     z-index: 20;
+    height: 0px;
     margin: 0 0 -2em 0;
-    border-bottom: 1px solid #638c0b; }
-    .nav-alpha a {
+    border-bottom: 1px solid #638c0b;
+    background: none; }
+    .nav-alpha a,
+    #body:target .nav-alpha a {
       font-size: 16px;
       font-size: 1.6rem;
       color: #638c0b;
       width: auto;
       padding: 0 0.5em; }
-      .nav-alpha a:hover {
+      .nav-alpha a:hover,
+      #body:target .nav-alpha a:hover {
         background: #638c0b;
         color: #fff; }
-    .nav-alpha .nav-current a {
+    .nav-alpha .nav-current a,
+    #body:target .nav-alpha .nav-current a {
       background: #638c0b;
-      color: #fff; } }
+      color: #fff; }
+
+  #body:target .nav-alpha {
+    padding: 0;
+    border: none; } }
 @media all and (min-width: 910px) {
-  .nav-alpha {
+  .nav-alpha,
+  #body:target .nav-alpha {
     max-width: 70%; } }
 @media all and (min-width: 1200px) {
-  .nav-alpha {
+  .nav-alpha,
+  #body:target .nav-alpha {
     max-width: 60%;
     position: absolute;
     top: -13px;
-    left: 160px; }
-    .nav-alpha a {
+    left: 160px;
+    border-bottom: none; }
+    .nav-alpha a,
+    #body:target .nav-alpha a {
       color: #fff;
       font-size: 15px;
       font-size: 1.5rem;
       margin: 0 0.1em;
       padding-top: 1em; }
-      .nav-alpha a:hover {
+      .nav-alpha a:hover,
+      #body:target .nav-alpha a:hover {
         background: #fff;
         color: #638c0b; }
-    .nav-alpha .nav-current a {
+    .nav-alpha .nav-current a,
+    #body:target .nav-alpha .nav-current a {
       background: #fff;
       color: #638c0b; }
+
+  #body:target .nav-alpha {
+    top: -20px; }
 
   .nav-top {
     margin: 10px 0 0 0; }
@@ -1274,7 +1300,7 @@ audio {
 
 .rslides_nav {
   position: absolute;
-  top: 50px;
+  top: 200px;
   left: 0;
   text-decoration: none;
   color: #111111;
@@ -1310,9 +1336,6 @@ audio {
   margin: 16px 0 0 0; }
 
 @media all and (min-width: 600px) {
-  .rslides_nav {
-    top: 100px; }
-
   .news-sections-inner {
     width: 48%;
     margin: 0 1%;
