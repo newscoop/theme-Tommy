@@ -76,7 +76,7 @@
   border: 1px solid $d-green;
   border-width: 2px 0 1px 0;
   padding: 0.5em 1em;
-  z-index: 100;
+  z-index: 1000;
   a {border-top: 1px solid $l-green;}
 }
 
@@ -91,14 +91,17 @@
 @media all and (min-width: 700px) {
   .nav-link {display: none;}
 
-  .nav-alpha {
+  .nav-alpha,
+  #body:target .nav-alpha {
     display: block;
     position: relative;
     top: -35px;
     max-width: 60%;
     z-index: 20;
+    height: 0px;
     margin: 0 0 -2em 0;
     border-bottom: 1px solid $d-green;
+    background: none;
     a {
       @include font-size(16);
       color: $d-green;
@@ -114,18 +117,23 @@
       color: #fff;
     }
   }
+
+  #body:target .nav-alpha {padding: 0; border: none;}
 }
 
 @media all and (min-width: 910px) {
-  .nav-alpha {max-width: 70%;}
+  .nav-alpha,
+   #body:target .nav-alpha {max-width: 70%;}
 }
 
 @media all and (min-width: 1200px) {
-  .nav-alpha {
+  .nav-alpha,
+   #body:target .nav-alpha {
     max-width: 60%;
     position: absolute;
     top: -13px;
     left: 160px;
+    border-bottom: none;
     a {
       color: #fff;
       @include font-size(15);
@@ -141,6 +149,8 @@
       color: $d-green;
     }
   }
+
+  #body:target .nav-alpha {top: -20px;}
 
   .nav-top {
     margin: 10px 0 0 0;

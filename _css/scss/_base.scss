@@ -90,6 +90,10 @@ input:focus {
 	color: #000 !important;
 }
 
+body:focus {
+	background-color: #fff !important;
+}
+
 .clearfix {
 	*display: inline-block;
 	&:after {
@@ -139,6 +143,8 @@ img {
 	box-shadow: 2px 2px 10px #ba1b1b;
 	span {color: #ba1b1b;}
 }
+
+.info-hidden {display: none;}
 
 .label-premium {
 	display: inline-block;

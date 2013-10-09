@@ -8,10 +8,10 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<main role="main" class="site-section" id="main">
+<main role="main" class="site-section main" id="main">
     
     <section class="main-alpha">
-    	<h2>{{ $gimme->section->name }}</h2>
+    	<h2 class="hl-alpha">{{ $gimme->section->name }}</h2>
 
     	{{ include file="_tpl/section-cont.tpl" }}
     </section>
