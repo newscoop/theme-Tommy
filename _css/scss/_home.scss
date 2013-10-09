@@ -160,7 +160,7 @@
 
 .rslides_nav {
 	position: absolute;
-	top: 50px;
+	top: 200px;
 	left: 0;
 	text-decoration: none;
 	color: $black;
@@ -201,7 +201,6 @@
 #slider-front {margin: 16px 0 0 0;}
 
 @media all and (min-width: 600px) {
-	.rslides_nav {top: 100px;}
 
  	.news-sections-inner {
  		width: 48%;

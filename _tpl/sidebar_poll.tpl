@@ -9,7 +9,6 @@
         {{ elseif $gimme->debate_action->is_error }}
             <p class="info info-error"><span aria-hidden="true" class="icon-blocked"></span> {{ #alreadyVoted# }}</p>
         {{ /if }}                        
-
         {{ assign var="votes" value=0 }}
         <fieldset id="debate_1_1_form">
           <legend class="acc">{{ $gimme->debate->question }}</legend>
@@ -31,6 +30,7 @@
        {{ if $gimme->debate->is_votable }}
 
             <h2><span aria-hidden="true" class="icon-bullhorn"></span> {{ $gimme->debate->question }}</h2> 
+            <p class="info-hidden info-no-answer info info-error"><span aria-hidden="true" class="icon-blocked"></span> {{ #pleaseSelectOneAnswer# }}</p>
             {{ debate_form template="_tpl/sidebar_poll.tpl" submit_button="{{ #pollButton# }}" html_code="class=\"poll-button\"" }}  
             
             {{* this is to find out template id for this template, will have to be assigned as hidden form field *}}     
