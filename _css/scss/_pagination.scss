@@ -14,7 +14,7 @@
 		color: $black;
 		@include font-size(16);
 		&:hover {
-			color: #fff;
+			color: $white;
 			background: $d-green;
 		}
 	}

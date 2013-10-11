@@ -3,8 +3,8 @@
 	position: relative;
 	h2 {
 		position: absolute;
-		background: #fff;
-		background: rgba(255, 255, 255, 0.8);
+		background: $white;
+		background: rgba($white, 0.8);
 		bottom: 0.5em;
 		left: 0;
 		right: 0;
@@ -19,10 +19,10 @@
 		padding: 0.5em;
 		right: 0;
 		background: $d-green;
-		color: #fff;
+		color: $white;
 		@include font-size(14);
 		a {
-			color: #fff;
+			color: $white;
 			font-weight: normal;
 			text-decoration: none;
 		}
@@ -47,7 +47,7 @@
 	h2 a {
 		background: $d-green;
 		padding: 0.4em;
-		color: #fff;
+		color: $white;
 		font-weight: normal;
 		font-family: $alpha-font;
 		clear: both;
@@ -89,21 +89,21 @@
 		display: block;
 		clear: both;
 		&:focus {
-			background: #fff !important;
+			background: $white !important;
 			color: $d-green !important;
 		}
 	}
 }
 
 .site-section .news-sections {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $l-grey;
 	padding: 0.5em 0 1em 0;
 }
 
 
 .news-sections-inner .news-sections-inner-alpha {
 	padding: 0.5em 0 0 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $l-grey;
 }
 
 .news-section-comments {
@@ -164,7 +164,7 @@
 	left: 0;
 	text-decoration: none;
 	color: $black;
-	background: #fff;
+	background: $white;
 	background: rgba(255,255,255,0.8);
 	padding: 0.3em;
 	z-index: 10;
@@ -188,11 +188,11 @@
 		float: left;
 		padding: 0.4em 0.8em;
 		background: $d-green;
-		color: #fff;
+		color: $white;
 		margin: 0 1em 10px 0;
 		&:hover,
 		&:focus {
-			background: #fff;
+			background: $white;
 			color: $d-green;
 		}
 	}
