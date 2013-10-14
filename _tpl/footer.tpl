@@ -17,9 +17,9 @@
             {{ list_articles ignore_issue="true" ignore_section="true" constraints="type is page" }}
                 <li><a href="{{ url options="article" }}">{{ $gimme->article->name }}</a></li>
             {{ /list_articles }}
-                <li><a href="http://twitter.com/sourcefabric "><span aria-hidden="true" class="icon-twitter"></span> Twitter</a></li>
-                <li><a href="http://facebook.com/sourcefabric "><span aria-hidden="true" class="icon-facebook"></span> Facebook</a></li>
-                <li><a href="/en/static/rss"><span aria-hidden="true" class="icon-feed"></span> RSS</a></li> 
+                <li><a title="{{ #opensNewWindow# }}" target="_blank" href="http://twitter.com/sourcefabric "><span aria-hidden="true" class="icon-twitter"></span> Twitter</a></li>
+                <li><a title="{{ #opensNewWindow# }}" target="_blank"  href="http://facebook.com/sourcefabric "><span aria-hidden="true" class="icon-facebook"></span> Facebook</a></li>
+                <li><a title="{{ #opensNewWindow# }}" target="_blank" href="/en/static/rss"><span aria-hidden="true" class="icon-feed"></span> RSS</a></li> 
                 <li><a href="/?tpl=6"><span aria-hidden="true" class="icon-list"></span> {{ #archive# }}</a></li>                           
             </ul>
         </div>
@@ -27,8 +27,9 @@
             <h4>{{ #aboutUs# }}</h4>
             <p>{{ #newscoopPromo# }}</p>
         </div>
-        <div>
+        <div class="copyright">
             <p>{{ #copyrightMessage# }}</p>
+            <p><a title="{{ #opensNewWindow# }}" target="_blank" href="http://www.sourcefabric.org/en/newscoop/">Newscoop </a> Tommy Theme</p>
         </div>
         <a class="link-to-top" href="#top">{{ #backToTop# }}</a>
     </div>

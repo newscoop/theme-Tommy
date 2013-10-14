@@ -1565,6 +1565,12 @@ audio {
       top: -42px;
       left: 37px; }
 
+.copyright p {
+  padding: 0; }
+.copyright a {
+  padding: 0 4px 0 0;
+  width: auto; }
+
 @media all and (min-width: 500px) {
   .footer-main div {
     width: 48%;
