@@ -26,7 +26,7 @@
 	}
 }
 
-.oldie .stars li {background: #f0f0f0;}
+.oldie .stars li {background: $l-grey;}
 
 .oldie .stars .ratings_vote{background: #ddd;}
 
@@ -40,5 +40,5 @@
 	display: block;
 	clear: both;
 	padding: 0.3em 0.6em;
-	background: #f0f0f0;
+	background: $l-grey;
 }

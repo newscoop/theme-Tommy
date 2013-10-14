@@ -72,26 +72,26 @@ main {
 
 .acc:focus,
 .acc:focus * {
-	color: #000;
+	color: $black;
 	position: fixed;
-	background: #fff;
-	border: 1px solid #000;
+	background: $white;
+	border: 1px solid $black;
 	left: 0;
 	z-index:1000;
 }
 
 *:focus {
-	background-color: #111 !important;
-	color: #fff !important;
+	background-color: $black !important;
+	color: $white !important;
 }
 
 input:focus {
-	background-color: #f1f1f1 !important;
-	color: #000 !important;
+	background-color: $l-grey !important;
+	color: $black !important;
 }
 
 body:focus {
-	background-color: #fff !important;
+	background-color: $white !important;
 }
 
 .clearfix {
@@ -126,7 +126,7 @@ img {
 .info,
 .errors {
 	padding: 0.5em;
-	box-shadow: 2px 2px 10px #ddd;
+	box-shadow: 2px 2px 10px $l-grey;
 	margin: 0 0 10px 0;
 	p {
 		margin: 0;
@@ -140,8 +140,8 @@ img {
 
 .info-error,
 .errors li {
-	box-shadow: 2px 2px 10px #ba1b1b;
-	span {color: #ba1b1b;}
+	box-shadow: 2px 2px 10px $red;
+	span {color: $red;}
 }
 
 .info-hidden {display: none;}
@@ -149,8 +149,8 @@ img {
 .label-premium {
 	display: inline-block;
 	margin: 0 0 0 4px;
-	background: #ba1b1b;
-	color: #fff;
+	background: $red;
+	color: $white;
 	padding: 2px 4px;
 	@include font-size(12);
 }
