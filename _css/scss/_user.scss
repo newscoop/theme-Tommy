@@ -3,7 +3,7 @@
 .user-edit-link {
 	padding: 0.3em;
 	background: $d-green;
-	color: #fff;
+	color: $white;
 	float: right;
 	text-decoration: none;
 }
@@ -24,7 +24,7 @@
 }
 
 .user-articles-list article {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $l-grey;
 	padding: 0.5em 0 2em 0
 }
 
@@ -32,7 +32,7 @@
 	a {
 		display: block;
 		padding: 0 0 1em 0;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid $l-grey;
 	}
 	p {margin: 0}
 }

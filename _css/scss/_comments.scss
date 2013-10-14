@@ -11,12 +11,12 @@
 	li {
 		padding: 1em 1em 0.1em 1em;
 		margin: 0 0 1em 0;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid $l-grey;
 	}
 }
 
 .article-comments li:nth-child(2n+1) {
-	background: #eee;
+	background: $l-grey;
 }
 
 .article-comments-write {

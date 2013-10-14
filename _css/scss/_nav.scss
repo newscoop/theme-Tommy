@@ -109,12 +109,12 @@
       padding: 0 0.5em;
       &:hover {
         background: $d-green;
-        color: #fff;
+        color: $white;
       }
     }
     .nav-current a {
       background: $d-green;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -135,17 +135,17 @@
     left: 160px;
     border-bottom: none;
     a {
-      color: #fff;
+      color: $white;
       @include font-size(15);
       margin: 0 0.1em;
       padding-top: 1em;
       &:hover {
-        background: #fff;
+        background: $white;
         color: $d-green;
       }
     }
     .nav-current a {
-      background: #fff;
+      background: $white;
       color: $d-green;
     }
   }
@@ -155,7 +155,7 @@
   .nav-top {
     margin: 10px 0 0 0;
     a {
-      color: #fff;
+      color: $white;
     }
   }
 }

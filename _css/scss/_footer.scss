@@ -11,8 +11,8 @@
 		@include font-size(16);
 		font-weight: bold;
 		margin: 0;
-		color: #fff;
-		border-bottom: 1px solid #fff;
+		color: $white;
+		border-bottom: 1px solid $white;
 	}
 	ul {
 		list-style: none;
@@ -21,7 +21,7 @@
 	}
 	a,
 	p {
-		color: #fff;
+		color: $white;
 		padding: 0.3em;
 		display: block;
 		text-decoration: none;
@@ -30,7 +30,7 @@
 		float: left;
 	}
 	a:hover {
-		background: #fff;
+		background: $white;
 		color: $d-green;
 	}
 	p {
@@ -40,18 +40,18 @@
 	.link-to-top {
 		display: block;
 		clear: both;
-		color: #fff;
+		color: $white;
 		width: 100px;
 		float: none;
 		padding: 0.4em;
 		margin: 0 auto;
 		text-align: center;
-		border-top: 2px solid #fff;
+		border-top: 2px solid $white;
 		position: relative;
 		background: rgba(0,0,0,0.1);
 		&:before {
 			content: "";
-			border: 20px solid #fff;
+			border: 20px solid $white;
 			border-color:  transparent transparent rgba(255,255,255,0.6) transparent;
 			position: absolute;
 			top: -42px;
@@ -60,6 +60,13 @@
 	}
 }
 
+.copyright {
+	p {padding: 0;}
+	a {
+		padding: 0 4px 0 0;
+		width: auto;
+	}
+}
 
 
 @media all and (min-width: 500px) {

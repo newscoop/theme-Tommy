@@ -3,7 +3,7 @@
     <article class="news-sections clearfix">
         <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
         {{ if $gimme->article->comment_count > 0 }}
-        <a href="{{ uri option='article'}}#comments" class="news-section-comments">
+        <a href="{{ uri options='article'}}#comments" class="news-section-comments">
         <span aria-hidden="true" class="icon-bubble"></span>
             {{ if $gimme->article->comment_count == 1 }}
                 {{ $gimme->article->comment_count }} <span class="acc">{{ #comment# }} {{ #for# }} {{ $gimme->article->name }}</span>
@@ -17,7 +17,7 @@
         {{ if !$gimme->article->content_accessible }}
         <span class="label label-premium"><span aria-hidden="true" class="icon-lock"></span> {{ #premium# }}</span>
         {{ /if }}
-        <h3><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a> </h3>
+        <h3><a href="{{ uri options='article'}}">{{ $gimme->article->name }}</a> </h3>
         <span class="article-author">{{ #By# }}
         {{ list_article_authors }}
             {{ if $gimme->author->type == "Author" }}

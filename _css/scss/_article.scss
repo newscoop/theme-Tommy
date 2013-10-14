@@ -20,7 +20,7 @@
 .article-attachments h3 {
 	background: $d-green;
 	padding: 0.4em;
-	color: #fff;
+	color: $white;
 	font-weight: normal;
 	font-family: $alpha-font;
 	clear: both;
@@ -103,7 +103,7 @@ audio {width: 100%;}
 }
 
 .cs_img_caption {
-	background: #F1F1F1;
+	background: $l-grey;
 	display: block;
 	padding: 4px;
 	margin: -30px 0 20px 0;
