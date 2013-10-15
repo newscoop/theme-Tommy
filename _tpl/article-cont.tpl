@@ -64,17 +64,7 @@
             {{ /if }}
         </header>
         {{ if $gimme->article->type_name == "news" }}
-            {{ include file="_tpl/article-slideshows.tpl" }}
-        {{ /if }}
-        {{ if $gimme->article->type_name == "news" }}
-            {{ assign var="has_slideshow" value=0 }}
-            {{ foreach $gimme->article->slideshows as $slideshow }}
-            {{ assign var="has_slideshow" value=$has_slideshow+1 }}
-            {{ /foreach }}
-
-            {{ if !$has_slideshow > 0}}
             {{ include file="_tpl/img/img_slider.tpl"}}
-            {{ /if }}
         {{ /if }}
 
         {{ include file="_tpl/_edit-article.tpl" }}
