@@ -2,7 +2,7 @@
   {{assign var=hasvideo value=0}}
   {{ list_article_attachments }}
     {{ if $gimme->attachment->extension == oga || $gimme->attachment->extension == mp3 || $gimme->attachment->extension == MP3  }}          
-    <div class="article-attachments">
+    <div class="article-attachments" id="audioattachment">
       <h3> {{ #listen# }}</h3>
         <audio src="{{ uri options="articleattachment" }}" controls></audio>
         <a href="{{ uri options="articleattachment" }}">{{ #downloadAudioFile# }} ( .{{ $gimme->attachment->extension }} )</a>
@@ -22,7 +22,7 @@
   {{ /if }}  
 
   {{ if $hasvideo == true }}
-  <div class="article-attachments">
+  <div class="article-attachments" id="videoattachment">
     <h3> {{ #watch# }}</h3>
       <div class="flowplayer" data-engine="flash" data-swf="{{ url static_file='_js/vendor/flowplayer/flowplayer.swf' }}" data-ratio="0.417">
         <video >
