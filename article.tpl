@@ -17,6 +17,7 @@
     {{ /if }}
     </section>
     <aside class="main-beta clearfix" role="complementary">
+        {{ include file="_tpl/article-slideshows.tpl" }}
         {{ include file="_tpl/sidebar_poll.tpl" }}
         {{ include file="_tpl/sidebar_comments.tpl" }}
         {{ include file="_tpl/sidebar_ad.tpl" }}

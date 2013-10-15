@@ -48,7 +48,18 @@
             {{ else }}
                       <h3><span aria-hidden="true" class="icon-camera"></span> Image</h3>
                     {{ /if }}
-              <a href="{{ uri options="article" }}">
+              {{ if $multimediaType=="video" || $multimediaType=='audio'}} 
+                {{ list_article_attachments length="1" }}
+                    {{ if $multimediaType == "audio" }}
+                      <a href="{{ uri options="article" }}#audioattachment">
+                    {{ elseif $multimediaType == "video" }}
+                      <a href="{{ uri options="article" }}#videoattachment">
+                    {{ /if }}
+                {{ /list_article_attachments }}
+            {{ else }}
+                      <a href="{{ uri options="article" }}#imageattachment">
+                    {{ /if }}
+              
                 {{ include file="_tpl/img/img_rectangle.tpl" where="no"}}
               </a>
             </div>
