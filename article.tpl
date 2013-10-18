@@ -17,9 +17,15 @@
     {{ /if }}
     </section>
     <aside class="main-beta clearfix" role="complementary">
-        {{ include file="_tpl/article-slideshows.tpl" }}
-        {{ include file="_tpl/sidebar_poll.tpl" }}
-        {{ include file="_tpl/sidebar_comments.tpl" }}
+        {{ if $gimme->article->type_name == "debate" }}
+            {{ include file="_tpl/sidebar_comments.tpl" }}
+            {{ include file="_tpl/debate-voting.tpl" }}
+        {{ /if }}
+        {{ if $gimme->article->type_name == "news" }}
+            {{ include file="_tpl/article-slideshows.tpl" }}
+            {{ include file="_tpl/sidebar_comments.tpl" }}
+        {{ /if }}
+        
         {{ include file="_tpl/sidebar_ad.tpl" }}
     </aside>
 </main>

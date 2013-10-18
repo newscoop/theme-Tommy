@@ -1461,6 +1461,18 @@ audio {
   float: right;
   display: block; }
 
+.vote-box-poll input,
+.vote-box-poll label {
+  display: none; }
+
+.poll-button-debate {
+  display: block;
+  background: #638c0b;
+  color: white;
+  float: left;
+  padding: 5px 10px;
+  margin: 0 20px 0 0; }
+
 .stars {
   margin: 0;
   padding: 0;

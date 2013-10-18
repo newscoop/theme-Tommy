@@ -30,3 +30,17 @@
 	float: right;
 	display: block;
 }
+
+.vote-box-poll input,
+.vote-box-poll label {
+	display: none;
+}
+
+.poll-button-debate {
+	display: block;
+	background: $d-green;
+	color: $white;
+	float: left;
+	padding: 5px 10px;
+	margin: 0 20px 0 0;
+}
