@@ -1588,7 +1588,8 @@ audio {
       left: 37px; }
 
 .copyright p {
-  padding: 0; }
+  padding: 0;
+  clear: left; }
 .copyright a {
   padding: 0 4px 0 0;
   width: auto; }
