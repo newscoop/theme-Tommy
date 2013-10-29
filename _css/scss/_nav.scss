@@ -136,7 +136,7 @@
     border-bottom: none;
     a {
       color: $white;
-      @include font-size(15);
+      @include font-size(14);
       margin: 0 0.1em;
       padding-top: 1em;
       &:hover {
@@ -158,6 +158,11 @@
       color: $white;
     }
   }
+}
+
+@media all and (min-width: 1300px) {
+  .nav-alpha a,
+   #body:target .nav-alpha a {@include font-size(14);}
 }
 
 

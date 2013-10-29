@@ -80,7 +80,7 @@ main {
 	z-index:1000;
 }
 
-*:focus {
+a:focus {
 	background-color: $black !important;
 	color: $white !important;
 }
@@ -92,6 +92,12 @@ input:focus {
 
 body:focus {
 	background-color: $white !important;
+}
+
+#comments:focus {
+	background-color: $white !important;
+	color: $black !important;
+	outline: none;
 }
 
 .clearfix {

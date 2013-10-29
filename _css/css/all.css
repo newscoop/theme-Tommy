@@ -619,7 +619,7 @@ main {
   left: 0;
   z-index: 1000; }
 
-*:focus {
+a:focus {
   background-color: #111111 !important;
   color: white !important; }
 
@@ -629,6 +629,11 @@ input:focus {
 
 body:focus {
   background-color: white !important; }
+
+#comments:focus {
+  background-color: white !important;
+  color: #111111 !important;
+  outline: none; }
 
 .clearfix {
   *display: inline-block; }
@@ -923,8 +928,8 @@ input {
     .nav-alpha a,
     #body:target .nav-alpha a {
       color: white;
-      font-size: 15px;
-      font-size: 1.5rem;
+      font-size: 14px;
+      font-size: 1.4rem;
       margin: 0 0.1em;
       padding-top: 1em; }
       .nav-alpha a:hover,
@@ -943,6 +948,11 @@ input {
     margin: 10px 0 0 0; }
     .nav-top a {
       color: white; } }
+@media all and (min-width: 1300px) {
+  .nav-alpha a,
+  #body:target .nav-alpha a {
+    font-size: 14px;
+    font-size: 1.4rem; } }
 #body:target .nav-link-close {
   display: block; }
 
