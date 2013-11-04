@@ -1451,7 +1451,8 @@ audio {
   .poll-option input {
     float: left;
     margin: 0.3em 0.5em 0 0;
-    display: block; }
+    display: block;
+    border: none; }
 
 .poll-progress {
   width: 100%;

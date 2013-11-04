@@ -129,7 +129,10 @@
       });
 
     });
-    window.addEventListener("hashchange",function(){var b=document.getElementById(location.hash.substring(1));b&&(/^(?:a|select|input|button|textarea)$/i.test(b.tagName)||(b.tabIndex=-1),b.focus())},!1);
+    
+    if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+      window.addEventListener("hashchange",function(){var b=document.getElementById(location.hash.substring(1));b&&(/^(?:a|select|input|button|textarea)$/i.test(b.tagName)||(b.tabIndex=-1),b.focus())},!1);
+    }
     </script>      
     </body>
 </html>
