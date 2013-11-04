@@ -771,8 +771,7 @@ input {
   font-size: 1.4rem;
   color: #111111;
   max-width: 150px;
-  background: white;
-}
+  background: white; }
 
 @media all and (min-width: 700px) {
   .search-field-alpha {
@@ -884,7 +883,29 @@ input {
   .nav-link {
     display: none; }
 
-  .nav-alpha,
+  .nav-alpha {
+    display: block;
+    position: relative;
+    top: -35px;
+    max-width: 60%;
+    z-index: 20;
+    height: 0px;
+    margin: 0 0 -2em 0;
+    border-bottom: 1px solid #638c0b;
+    background: none; }
+    .nav-alpha a {
+      font-size: 16px;
+      font-size: 1.6rem;
+      color: #638c0b;
+      width: auto;
+      padding: 0 0.5em; }
+      .nav-alpha a:hover {
+        background: #638c0b;
+        color: white; }
+    .nav-alpha .nav-current a {
+      background: #638c0b;
+      color: white; }
+
   #body:target .nav-alpha {
     display: block;
     position: relative;
@@ -895,18 +916,15 @@ input {
     margin: 0 0 -2em 0;
     border-bottom: 1px solid #638c0b;
     background: none; }
-    .nav-alpha a,
     #body:target .nav-alpha a {
       font-size: 16px;
       font-size: 1.6rem;
       color: #638c0b;
       width: auto;
       padding: 0 0.5em; }
-      .nav-alpha a:hover,
       #body:target .nav-alpha a:hover {
         background: #638c0b;
         color: white; }
-    .nav-alpha .nav-current a,
     #body:target .nav-alpha .nav-current a {
       background: #638c0b;
       color: white; }
@@ -915,29 +933,46 @@ input {
     padding: 0;
     border: none; } }
 @media all and (min-width: 910px) {
-  .nav-alpha,
+  .nav-alpha {
+    max-width: 70%; }
+
   #body:target .nav-alpha {
     max-width: 70%; } }
 @media all and (min-width: 1200px) {
-  .nav-alpha,
+  .nav-alpha {
+    max-width: 60%;
+    position: absolute;
+    top: -13px;
+    left: 160px;
+    border-bottom: none; }
+    .nav-alpha a {
+      color: white;
+      font-size: 14px;
+      font-size: 1.4rem;
+      margin: 0 0.1em;
+      padding-top: 1em; }
+      .nav-alpha a:hover {
+        background: white;
+        color: #638c0b; }
+    .nav-alpha .nav-current a {
+      background: white;
+      color: #638c0b; }
+
   #body:target .nav-alpha {
     max-width: 60%;
     position: absolute;
     top: -13px;
     left: 160px;
     border-bottom: none; }
-    .nav-alpha a,
     #body:target .nav-alpha a {
       color: white;
       font-size: 14px;
       font-size: 1.4rem;
       margin: 0 0.1em;
       padding-top: 1em; }
-      .nav-alpha a:hover,
       #body:target .nav-alpha a:hover {
         background: white;
         color: #638c0b; }
-    .nav-alpha .nav-current a,
     #body:target .nav-alpha .nav-current a {
       background: white;
       color: #638c0b; }
@@ -950,7 +985,10 @@ input {
     .nav-top a {
       color: white; } }
 @media all and (min-width: 1300px) {
-  .nav-alpha a,
+  .nav-alpha a {
+    font-size: 14px;
+    font-size: 1.4rem; }
+
   #body:target .nav-alpha a {
     font-size: 14px;
     font-size: 1.4rem; } }
