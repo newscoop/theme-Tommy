@@ -771,7 +771,8 @@ input {
   font-size: 1.4rem;
   color: #111111;
   max-width: 150px;
-  background: white; }
+  background: white;
+}
 
 @media all and (min-width: 700px) {
   .search-field-alpha {
@@ -1451,7 +1452,8 @@ audio {
   .poll-option input {
     float: left;
     margin: 0.3em 0.5em 0 0;
-    display: block; }
+    display: block;
+    border: none; }
 
 .poll-progress {
   width: 100%;
