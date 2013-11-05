@@ -101,6 +101,7 @@
     margin: 0 0 -2em 0;
     border-bottom: 1px solid $d-green;
     background: none;
+    li {display: inline;}
     a {
       @include font-size(16);
       color: $d-green;
