@@ -1,0 +1,19 @@
+Newscoop theme Tommy Changelog
+==============================
+
+Version 1.1
+-----------
+
+Released on November 21, 2013
+
+- Issue with background on comments in IE
+- Body text is not visible in IE
+- Footer layout appears broken in Safari
+- Search box overlaps with main navigation
+
+Version 1.0
+-----------
+
+Released on October 21, 2013
+
+- First public preview release
