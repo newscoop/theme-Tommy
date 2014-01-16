@@ -19,12 +19,12 @@ Features:
 Documentation
 -------------
 
-https://wiki.sourcefabric.org/pages/viewpage.action?pageId=10913821
+http://wiki.sourcefabric.org/x/HYim
 
 Demo
 ----
 
-http://tommy.lab.sourcefabric.org
+http://tommy-dev.lab.sourcefabric.org
 
 Copyright & License
 -------------------
