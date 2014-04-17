@@ -1033,6 +1033,57 @@ input {
   font-size: 16px;
   font-size: 1.6rem; }
 
+.article-attachments blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eee;
+}
+.article-attachments blockquote p{
+font-size: 17.5px;
+font-weight: 300;
+line-height: 1.25;
+}
+.article-attachments table {
+  box-shadow: 0 1px 0 0 #FFFFFF;
+  max-width: 100%;
+  width: 100%;
+}
+.article-attachments table tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
+}
+.article-attachments table tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-right-radius: 2px;
+}
+.article-attachments table tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  border-bottom-right-radius: 2px;
+}
+.article-attachments table tr:last-child td:first-child {
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  border-bottom-left-radius: 2px;
+}
+.article-attachments table tr td {
+  padding: 7px;
+  border-left: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+}
+.article-attachments table tr td:last-child {
+  border-right: 1px solid #DDDDDD;
+}
+.article-attachments table tr:last-child td {
+  border-bottom: 1px solid #DDDDDD;
+}
+.article-attachments table tbody > tr:nth-child(2n+1) > td,
+.article-attachments table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
+  background-color: #F2F2F2;
+}
+
 @media all and (min-width: 660px) {
   .article-attachments,
   .site-article .news-sections {
