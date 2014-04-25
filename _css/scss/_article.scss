@@ -27,6 +27,49 @@
 	@include font-size(16);
 }
 
+.article-fulltext blockquote {
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	border-left: 5px solid #eee;
+	p {
+		font-size: 17.5px;
+		font-weight: 300;
+		line-height: 1.25;
+	}
+	table {
+		box-shadow: 0 1px 0 0 $white;
+		max-width: 100%;
+		width: 100%;
+	}
+	table tr:first-child td:first-child {
+  		border-top-left-radius: 2px;
+	}
+	table tr:first-child td:last-child {
+  		border-top-right-radius: 2px;
+	}
+	table tr:last-child td:last-child {
+ 		border-bottom-right-radius: 2px;
+	}
+	table tr:last-child td:first-child {
+  		border-bottom-left-radius: 2px;
+	}
+	table tr td {
+  		padding: 7px;
+  		border-left: 1px solid #ddd;
+  		border-top: 1px solid #ddd;
+	}
+	table tr td:last-child {
+  		border-right: 1px solid #ddd;
+	}
+	table tr:last-child td {
+  		border-bottom: 1px solid #ddd;
+	}
+	table tbody > tr:nth-child(2n+1) > td,
+	table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
+  		background-color: $l-grey;
+	}
+}
+
 @media all and (min-width: 660px) {
 	.article-attachments,
 	.site-article .news-sections {
