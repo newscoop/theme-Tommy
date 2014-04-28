@@ -1066,6 +1066,8 @@ input {
   .article-fulltext blockquote table tbody > tr:nth-child(2n+1) > td,
   .article-fulltext blockquote table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
     background-color: #f1f1f1; }
+  border-left: 5px solid #eee;
+}
 
 @media all and (min-width: 660px) {
   .article-attachments,
