@@ -57,7 +57,7 @@
                 {{ /if }}
                 {{ comment_form html_code="id=\"commentform\" class=\"article-comment-form\"" _button="{{ #submitComment# }}" }}
                     {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
-                    {{* recaptcha *}}
+                    {{ recaptcha }}
                 {{ /comment_form }}
             {{ else }}
                 <p>{{ #commentsLocked# }}</p>
@@ -85,7 +85,7 @@
 
                 {{ comment_form html_code="id=\"commentform\" class=\"article-comment-form\"" _button="{{ #submitComment# }}" }}
                     {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
-                    {{* recaptcha *}}
+                    {{ recaptcha }}
                 {{ /comment_form }}
             {{ else }}
                 <p>{{ #commentsLocked# }}</p>
@@ -112,7 +112,7 @@
                     {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\"  placeholder=\"Your name\" " }}
                     {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\"  placeholder=\"Your Email\"" }}
                     {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\"  placeholder=\"Write your message here\" " }}
-                    {{* recaptcha *}}
+                    {{ recaptcha }}
 
                 {{ /comment_form }}
             {{ else }}
