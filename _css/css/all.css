@@ -1,4 +1,4 @@
-/* normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
+/*! normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -395,7 +395,6 @@ table {
   src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icomoon';
@@ -555,7 +554,6 @@ you can use the generic selector below, but it's slower:
 
 @-ms-viewport {
   width: device-width; }
-
 html {
   font: 64.5%/1.4 Arial, sans-serif;
   padding: 0;
@@ -810,6 +808,10 @@ input {
     list-style: none;
     padding: 0;
     margin: 0 0 0 20px; }
+    .nav-top li span {
+      color: #fff;
+      font-size: 14px;
+      font-size: 1.4rem; }
   .nav-top a {
     text-decoration: none;
     color: #111111; }
@@ -1043,29 +1045,29 @@ input {
     font-size: 17.5px;
     font-weight: 300;
     line-height: 1.25; }
-  .article-fulltext blockquote table {
-    box-shadow: 0 1px 0 0 white;
-    max-width: 100%;
-    width: 100%; }
-  .article-fulltext blockquote table tr:first-child td:first-child {
-    border-top-left-radius: 2px; }
-  .article-fulltext blockquote table tr:first-child td:last-child {
-    border-top-right-radius: 2px; }
-  .article-fulltext blockquote table tr:last-child td:last-child {
-    border-bottom-right-radius: 2px; }
-  .article-fulltext blockquote table tr:last-child td:first-child {
-    border-bottom-left-radius: 2px; }
-  .article-fulltext blockquote table tr td {
-    padding: 7px;
-    border-left: 1px solid #ddd;
-    border-top: 1px solid #ddd; }
-  .article-fulltext blockquote table tr td:last-child {
-    border-right: 1px solid #ddd; }
-  .article-fulltext blockquote table tr:last-child td {
-    border-bottom: 1px solid #ddd; }
-  .article-fulltext blockquote table tbody > tr:nth-child(2n+1) > td,
-  .article-fulltext blockquote table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
-    background-color: #f1f1f1; }
+.article-fulltext table {
+  box-shadow: 0 1px 0 0 white;
+  max-width: 100%;
+  width: 100%; }
+.article-fulltext table tr:first-child td:first-child {
+  border-top-left-radius: 2px; }
+.article-fulltext table tr:first-child td:last-child {
+  border-top-right-radius: 2px; }
+.article-fulltext table tr:last-child td:last-child {
+  border-bottom-right-radius: 2px; }
+.article-fulltext table tr:last-child td:first-child {
+  border-bottom-left-radius: 2px; }
+.article-fulltext table tr td {
+  padding: 7px;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd; }
+.article-fulltext table tr td:last-child {
+  border-right: 1px solid #ddd; }
+.article-fulltext table tr:last-child td {
+  border-bottom: 1px solid #ddd; }
+.article-fulltext table tbody > tr:nth-child(2n+1) > td,
+.article-fulltext table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
+  background-color: #f1f1f1; }
 
 @media all and (min-width: 660px) {
   .article-attachments,

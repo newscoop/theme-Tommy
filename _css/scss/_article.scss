@@ -27,14 +27,16 @@
 	@include font-size(16);
 }
 
-.article-fulltext blockquote {
-	padding: 10px 20px;
-	margin: 0 0 20px;
-	border-left: 5px solid #eee;
-	p {
-		font-size: 17.5px;
-		font-weight: 300;
-		line-height: 1.25;
+.article-fulltext {
+	blockquote {
+		padding: 10px 20px;
+		margin: 0 0 20px;
+		border-left: 5px solid #eee;
+		p {
+			font-size: 17.5px;
+			font-weight: 300;
+			line-height: 1.25;
+		}
 	}
 	table {
 		box-shadow: 0 1px 0 0 $white;
@@ -68,6 +70,7 @@
 	table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
   		background-color: $l-grey;
 	}
+
 }
 
 @media all and (min-width: 660px) {
