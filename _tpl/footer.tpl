@@ -28,7 +28,7 @@
             <p>{{ #newscoopPromo# }}</p>
         </div>
         <div class="copyright">
-            <p>{{ #copyrightMessage# }} <a title="{{ #opensNewWindow# }}" target="_blank" href="http://www.sourcefabric.org/en/newscoop/">Powered by Newscoop. </a></p>
+            <p>{{ #copyrightMessage# }} <a title="{{ #opensNewWindow# }}" target="_blank" href="http://www.sourcefabric.org/en/newscoop/">Powered by Newscoop.</a> Designed by <a target="_blank" href="http://www.sourcefabric.org/">Sourcefabric</a>.</p>
             <p>Newscoop Tommy Theme</p>
         </div>
         <a class="link-to-top" href="#top">{{ #backToTop# }}</a>
